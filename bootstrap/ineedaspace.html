@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway:400,700|Roboto+Slab:400,700|Roboto+Condensed:400italic,400,700' rel='stylesheet' type='text/css'>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">[Freespace]ATX</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right" role="form">
+            <div class="form-group">
+              <input type="text" placeholder="Email" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Password" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-success">Sign in</button>
+          </form>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+
+    <!--begin form-->
+    <div class="container content-wrap">
+      <div class="row">
+        <div class="col-md-12">
+
+          <form class="form-ineedaspace" role="form">
+            <h2 class="form-ineedaspace-heading">What are you looking for?</h2>
+            <input type="text" name="spacename" class="form-control" placeholder="Name of Space*" required autofocus>
+            <textarea name="description" class="form-control" placeholder="Description" cols="40" rows="5" ... ></textarea>
+            <!-- <input type="text" name="description" class="form-control" placeholder="Description"> -->
+            <div class="label">Capacity</div>
+            <select>
+              <option value="0-10">0-10</option>
+              <option value="11-50">11-50</option>
+              <option value="51-100">51-100</option>
+              <option value="100-200">100-200</option>
+              <option value="200-500">200-500</option>
+              <option value="500+">500+</option>
+            </select>
+
+            <input type="submit" name="submit" class="btn btn-lg btn-primary btn-block" value"Submit"/>
+          </form>
+        </div>
+      </div>
+    </div> <!-- /container -->
+
+    <div class="footer-wrap">
+        <div class="container footer">
+          <!-- Example row of columns -->
+          <div class="row footer">
+            <div class="col-md-4">
+              <h2>Subscribe</h2>
+              <form>
+                <input type="text" class="" name="emailaddress" value="" placeholder="Email Address" />
+                  <input type="submit" name="Submit" class="btn btn-default" value="Subscribe" />
+              </form>
+           </div>
+            <div class="col-md-4">
+              <h2>Quick Links</h2>
+              <ul>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+                <li><a href="#">Link 4</a></li>
+              </ul>
+            </div>
+            
+            <div class="col-md-4">
+              <h2>Contact</h2>
+              <p>123 Main Street</p>
+              <p>Austin, TX 78704</p>
+              <p><a href="mailto:info@company.org">info@company.com</a></p>
+            </div>
+          </div>
+
+          <footer>
+            <p>&copy; Company 2014</p>
+          </footer>
+        </div> <!-- /container -->
+      </div><!--end footer-wrap-->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- dist link-->
+    <!--<script src="js/bootstrap.min.js"></script>-->
+    <!-- dev link-->
+    <script src="dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
