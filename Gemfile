@@ -45,3 +45,7 @@ end
 # gem 'debugger', group: [:development, :test]
 gem 'devise'
 gem 'figaro'
+
+gem 'rspec'
+gem 'pry-debugger'
+
