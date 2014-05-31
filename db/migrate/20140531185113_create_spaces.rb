@@ -10,7 +10,6 @@ class CreateSpaces < ActiveRecord::Migration
       t.string      :zip
       t.text        :description
       t.references  :capacity
-      t.belongs_to  :user
       t.text        :comments
       t.float       :latitude
       t.float       :longitude
