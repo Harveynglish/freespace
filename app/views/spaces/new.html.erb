@@ -1,0 +1,18 @@
+<h1>Add Space</h1>
+
+<%= form_for(@space, url: {action: "create"} ) do |f| %>
+
+  <div><%= f.label :name %><br />
+  <%= f.text_field :name, autofocus: true %></div>
+
+  <div><%= f.label :description %><br />
+  <%= f.text_area :description, autofocus: true %></div>
+
+  <div><%= f.label :capacity_id %><br />
+  <%= f.text_field :capacity_id, autofocus: true %></div>
+
+  <div><%= f.label :comments %><br />
+    <%= f.text_field :comments, autocomplete: "off" %></div>
+
+  <div><%= f.submit "Sign up" %></div>
+<% end %>
