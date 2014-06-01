@@ -1,8 +1,9 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user!, :only => [:new, :create, :edit, :update, :destroy]
+  before_action :authenticate_user!, :only => [:new, :create, :edit, :update, :destroy, :show]
 
   def show
-    @space = Space.all
+    @user = current_user
+    @spaces = Space.all
     @activities = Activity.all
   end
 
