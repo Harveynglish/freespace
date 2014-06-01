@@ -17,6 +17,7 @@
       <td>Delete</td>
       <td>Alternate Contact</td>
       <% @spaces.each do |space| %>
+      <% if space.user %>
       <tr>
         <td><%= space.name %></td>
         <td><%= space.description %></td>
@@ -32,6 +33,7 @@
         <td>space.contact_name, space.contact_organization, space.contact_phone, space.contact_email</td>
         <% end %>
       </tr>
+      <% end %>
       <% end %>
     </table>
     <%= will_paginate @spaces %>

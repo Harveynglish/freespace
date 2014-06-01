@@ -7,4 +7,7 @@ class UsersController < ApplicationController
     @activities = @user.activities.all
   end
 
+  def destroy
+  end
+
 end

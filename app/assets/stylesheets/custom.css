@@ -1,0 +1,214 @@
+/****************************
+**      BASE LAYOUT      **
+****************************/
+.navbar {
+  margin-bottom: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+}
+.navbar-brand {
+  color: #fff !important;
+  font-family: "Montserrat" !important;
+  font-size: 30px !important;
+}
+
+.navbar-nav > li > a {
+  color: #fff !important;
+}
+/****************************
+**      HOMEPAGE     **
+****************************/
+.carousel-inner>.item>a>img,
+.carousel-inner>.item>img {
+  height: auto !important;
+}
+.homepage .about {
+  margin-top: 40px !important;
+}
+.homepage .about h3 {
+  color: #f21700 !important;
+  font-size: 30px !important;
+  font-weight: bold !important;
+}
+.homepage .about p {
+  color: #f21700 !important;
+}
+
+.homepage .promo-banner-wrap {
+  background-color: #f21700 !important;
+  color: #fff !important;
+}
+.homepage .promo-banner-wrap h3 {
+  color: #fff !important;
+  font-family: "Roboto Slab" !important;
+  font-size: 30px !important;
+  font-weight: bold !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+.homepage .promo-banner-wrap p {
+  color: #fff !important;
+}
+.homepage .quote-wrap {
+  position: relative !important;
+  min-height: 234px !important;
+}
+.homepage .quote-wrap .bg-container img{
+  display: block !important;
+  min-width: 100% !important;
+  position: absolute !important;
+  left: 0 !important;
+  top:0 !important;
+}
+.homepage .quote {
+  padding-top: 40px !important;
+}
+.homepage .quote h4 {
+  color: #f21700 !important;
+  font-family: "Montserrat" !important;
+  font-size: 24px !important;
+  background:#fff !important;
+  padding: 5px !important;
+  display: inline !important;
+  line-height: 2 !important;
+}
+.projectcontact {
+
+}
+.projectcontact p {
+  color: #f21700 !important;
+  font-family: "Roboto Slab" !important;
+  font-size: 32px !important;
+  text-align: center !important;
+  padding: 20px 40px !important;
+}
+.social-widgets .row {
+  padding: 40px 0 0 0 !important;
+}
+.social-widgets .row.content {
+  min-height: 550px !important;
+  padding: 0 0 40px 0 !important;
+}
+.social-widgets .widget-wrap {
+  width: 300px !important;
+  height: 400px !important;
+  margin: 0 auto !important;
+}
+.tagline .row {
+  padding: 40px 0 !important;
+}
+.tagline h4 {
+  max-width: 800px !important;
+  margin: 0 auto !important;
+  font-size: 22px !important;
+  text-align: center !important;
+}
+.promo-banner .row {
+  padding: 40px 0 !important;
+}
+.promo-banner img {
+
+}
+.footer-wrap {
+  background-image: -webkit-linear-gradient(top, #1a1a1a 0%, #000 100%) !important;
+  background-image:      -o-linear-gradient(top, #1a1a1a 0%, #000 100%) !important;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#1a1a1a), to(#000)) !important;
+  background-image:         linear-gradient(to bottom, #1a1a1a 0%, #000 100%) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff1a1a1a', endColorstr='#ff000000', GradientType=0) !important;
+  background-repeat: repeat-x !important;
+}
+.footer-wrap .footer-wrap > .active > a {
+  background-image: -webkit-linear-gradient(top, #000 0%, #060606 100%) !important;
+  background-image:      -o-linear-gradient(top, #000 0%, #060606 100%) !important;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#000), to(#060606)) !important;
+  background-image:         linear-gradient(to bottom, #000 0%, #060606 100%) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff000000', endColorstr='#ff060606', GradientType=0) !important;
+  background-repeat: repeat-x !important;
+  -webkit-box-shadow: inset 0 3px 9px rgba(0, 0, 0, .25) !important;
+          box-shadow: inset 0 3px 9px rgba(0, 0, 0, .25) !important;
+}
+.footer-wrap .footer-wrap,
+.footer-wrap .footer-wrap > li > a {
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, .25) !important;
+}
+.footer {
+  color: #fff !important;
+}
+.footer .row {
+  padding: 40px 0 !important;
+}
+footer p {
+  font-size: 10px !important;
+}
+/****************************
+**      FORMS     **
+****************************/
+.content-wrap {
+  padding: 120px 0 40px 0 !important;
+}
+.form-ihaveaspace {
+  max-width: 430px !important;
+  padding: 15px !important;
+  margin: 0 auto !important;
+}
+.form-ihaveaspace .label {
+  color: #000 !important;
+}
+.form-ihaveaspace .form-control,
+.form-ihaveaspace img,
+.form-ihaveaspace select {
+  margin-bottom: 10px !important;
+}
+.form-ihaveaspace #daysoftheweek col {
+  margin-right: 0 !important;
+}
+.form-ihaveaspace #daysoftheweek .checkbox {
+  line-height: 25px !important;
+  margin-top: 0 !important;
+}
+.form-ihaveaspace .slider-wrap {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.form-ihaveaspace .slider-wrap .row {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.form-ihaveaspace .slider-wrap .form-control {
+  width: 40px !important;
+  display: inline-block !important;
+  padding: 5px !important;
+  margin: 0 !important;
+  height: 25px !important;
+}
+.form-ineedaspace {
+  max-width: 430px !important;
+  padding: 15px !important;
+  margin: 0 auto !important;
+}
+.form-ineedaspace .label {
+  color: #000 !important;
+  text-align: left !important;
+  white-space: normal!important !important;
+}
+.form-ineedaspace .form-control,
+.form-ineedaspace img,
+.form-ineedaspace select {
+  margin-bottom: 10px !important;
+}
+/*thankyou pages*/
+.thankyou {
+  max-width: 900px !important;
+  margin: 60px auto !important;
+  text-align: center !important;
+}
+.col-wrap {
+  margin-bottom: 60px !important;
+}
+/*dashboard*/
+.col-md-offset-2 {
+  margin-left: 0 !important;
+}
+.col-sm-offset-3 {
+  margin-left: 0 !important;
+}

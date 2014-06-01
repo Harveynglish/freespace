@@ -9,6 +9,45 @@
   font-family: "Montserrat";
   font-size: 30px;
 }
+.footer .social-icons ul { 
+  margin: 0;
+  padding: 0;
+}
+.footer .social-icons li { 
+  list-style: none;
+  display: inline-block;
+  margin-left: 5px;
+  text-indent: -9999px;
+}
+.footer .social-icons li.facebook { 
+  background-image: url('../images/template/facebook.png');
+  width: 17px;
+  height: 35px;
+}
+.footer .social-icons li.twitter { 
+  background-image: url('../images/template/twitter.png');
+  width: 44px;
+  height: 33px;
+}
+.footer .social-icons li.instagram { 
+  background-image: url('../images/template/instagram.png');
+  width: 38px;
+  height: 39px;
+}
+.footer .social-icons li.youtube { 
+  background-image: url('../images/template/youtube.png');
+  width: 40px;
+  height: 39px;
+}
+.footer .social-icons li.googleplus { 
+  background-image: url('../images/template/googleplus.png');
+  width: 25px;
+  height: 26px;
+}
+.footer .social-icons ul { 
+  margin: 0;
+  padding: 0;
+}
 /****************************
 **      HOMEPAGE     **
 ****************************/
@@ -138,32 +177,38 @@
 
 }
 .footer-wrap {
-  background-image: -webkit-linear-gradient(top, #1a1a1a 0%, #000 100%);
-  background-image:      -o-linear-gradient(top, #1a1a1a 0%, #000 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#1a1a1a), to(#000));
-  background-image:         linear-gradient(to bottom, #1a1a1a 0%, #000 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff1a1a1a', endColorstr='#ff000000', GradientType=0);
-  background-repeat: repeat-x;
+  background-color: #f31700;
+  color: #fff;
 }
 .footer-wrap .footer-wrap > .active > a {
-  background-image: -webkit-linear-gradient(top, #000 0%, #060606 100%);
-  background-image:      -o-linear-gradient(top, #000 0%, #060606 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#000), to(#060606));
-  background-image:         linear-gradient(to bottom, #000 0%, #060606 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff000000', endColorstr='#ff060606', GradientType=0);
-  background-repeat: repeat-x;
-  -webkit-box-shadow: inset 0 3px 9px rgba(0, 0, 0, .25);
-          box-shadow: inset 0 3px 9px rgba(0, 0, 0, .25);
+  color: #fff;
 }
 .footer-wrap .footer-wrap,
 .footer-wrap .footer-wrap > li > a {
   text-shadow: 0 -1px 0 rgba(0, 0, 0, .25);
 }
-.footer {
+.footer, 
+.footer h1, 
+.footer h2, 
+.footer h3, 
+.footer h4, 
+.footer h5, 
+.footer h6,
+.footer a {
+  color: #fff;
+}
+.footer a:hover {
   color: #fff;
 }
 .footer .row {
   padding: 40px 0;
+}
+.footer ul {
+  margin: 0;
+  padding: 0;
+}
+.footer li {
+  list-style: none;
 }
 footer p {
   font-size: 10px;
@@ -224,16 +269,48 @@ footer p {
 .form-ineedaspace select {
   margin-bottom: 10px;
 }
-/*thankyou pages*/
-.thankyou {
-  max-width: 900px;
-  margin: 60px auto;
-  text-align: center;
+/****************************
+**      THANK YOU PAGES     **
+****************************/
+.thankyou-wrap {
+  position: relative;
+}
+.row.thankyou {
+  max-width: 700px;
+  margin: 17% auto;
+  text-align: left;
+}
+.thankyou-wrap {
+  position: relative;
+  min-height: 600px;
+  clear: both;
+  overflow: hidden;
+}
+.thankyou .bg-container img{
+  display: block;
+  min-width: 100%;
+  position: absolute;
+  left: 0;
+  top:0;
+}
+.thankyou h1 {
+  color: #f21700;
+  font-family: "Roboto Slab";
+  font-size: 40px;
+  font-weight: bold;
+  background:#fff;
+  padding: 5px;
+  display: inline;
+  line-height: 2;
+}
+.thankyou a.btn {
 }
 .col-wrap {
   margin-bottom: 60px;
 }
-/*dashboard*/
+/****************************
+**      DASHBOARD     **
+****************************/
 .col-md-offset-2 {
   margin-left: 0;
 }
