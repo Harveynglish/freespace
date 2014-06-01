@@ -2,24 +2,24 @@
 <div class="container content-wrap">
   <div class="row">
     <div class="col-md-12">
-      
+
       <%= form_for(@space, url: {action: "create"}, :html => {:class => "form-ihaveaspace"}) do |f| %>
-        
+
         <h2 class="form-ihaveaspace-heading">Tell us about your space</h2>
 
         <%= f.text_field :name, :id=>"spacename", :class => 'form-control', placeholder: "Name of Space*", required: true, autofocus: true %>
-        
+
         <%= f.text_field :address1, :id=>"address1", :class => 'form-control', placeholder: "Address1*", :required => true %>
-        
+
         <%= f.text_field :address2, placeholder: "Address2", :class => 'form-control' %>
 
         <%= f.text_field :city, placeholder: "City", :class => 'form-control' %>
-        
+
         <div class="label">State</div>
         <%= f.select :state, [["Alaska", "AK"], ["Alabama", "AL"], ["Arkansas", "AR"], ["American Samoa", "AS"], ["Arizona", "AZ"], ["California", "CA"], ["Colorado", "CO"], ["Connecticut", "CT"], ["District of Columbia", "DC"], ["Delaware", "DE"], ["Florida", "FL"], ["Georgia", "GA"], ["Guam", "GU"], ["Hawaii", "HI"], ["Iowa", "IA"], ["Idaho", "ID"], ["Illinois", "IL"], ["Indiana", "IN"], ["Kansas", "KS"], ["Kentucky", "KY"], ["Louisiana", "LA"], ["Massachusetts", "MA"], ["Maryland", "MD"], ["Maine", "ME"], ["Michigan", "MI"], ["Minnesota", "MN"], ["Missouri", "MO"], ["Mississippi", "MS"], ["Montana", "MT"], ["North Carolina", "NC"], ["North Dakota", "ND"], ["Nebraska", "NE"], ["New Hampshire", "NH"], ["New Jersey", "NJ"], ["New Mexico", "NM"], ["Nevada", "NV"], ["New York", "NY"], ["Ohio", "OH"], ["Oklahoma", "OK"], ["Oregon", "OR"], ["Pennsylvania", "PA"], ["Puerto Rico", "PR"], ["Rhode Island", "RI"], ["South Carolina", "SC"], ["South Dakota", "SD"], ["Tennessee", "TN"], ["Texas", "TX"], ["Utah", "UT"], ["Virginia", "VA"], ["Virgin Islands", "VI"], ["Vermont", "VT"], ["Washington", "WA"], ["Wisconsin", "WI"], ["West Virginia", "WV"], ["Wyoming", "WY"]], :class => 'form-control' %>
 
         <%= f.text_field :zip, placeholder: "Zip*", :class => 'form-control' %>
-        
+
         <!--%= f.text_field :zip, hidden: true, placeholder: "Latitude", :class => 'form-control', :hidden => true %-->
         <%= hidden_field_tag(:Latitude, "") %>
 
@@ -28,7 +28,7 @@
 
         <%= f.text_area :description, placeholder: "Description", :class => 'form-control', :cols => "40", :rows => "5" %>
 
-        <%= f.text_field :capacity, placeholder: "Capacity", :class => 'form-control' %>
+        <%= f.text_field :capacity_id, placeholder: "Capacity", :class => 'form-control' %>
 
         <%= f.submit "Submit", :class => "btn btn-lg btn-primary btn-block" %>
       <% end %>
