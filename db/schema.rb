@@ -44,8 +44,8 @@ ActiveRecord::Schema.define(version: 20140601035008) do
   create_table "available_times", force: true do |t|
     t.integer  "space_id"
     t.integer  "day_id"
-    t.time     "start_time"
-    t.time     "end_time"
+    t.integer  "start_time"
+    t.integer  "end_time"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -76,7 +76,7 @@ ActiveRecord::Schema.define(version: 20140601035008) do
     t.text     "comments"
     t.float    "latitude"
     t.float    "longitude"
-    t.boolean  "always_available"
+    t.boolean  "available_all_hours"
     t.boolean  "alternate_contact"
     t.string   "contact_name"
     t.string   "contact_organization"
