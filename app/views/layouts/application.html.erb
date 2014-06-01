@@ -1,21 +1,77 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Freespaceatx</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html lang="en">
+	<head>
+	  <title>[freespace] ATX</title>
+	  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
 
-<% if notice %>
-  <p class="alert alert-success"><%= notice %></p>
-<% end %>
-<% if alert %>
-  <p class="alert alert-danger"><%= alert %></p>
-<% end %>
+	  <%= stylesheet_link_tag    "bootstrap.min.css", media: "all", "data-turbolinks-track" => true %>
 
-<%= yield %>
+	  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+	  <%= csrf_meta_tags %>
 
-</body>
+	  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway:400,700|Roboto+Slab:400,700|Roboto+Condensed:400italic,400,700' rel='stylesheet' type='text/css'>
+
+	</head>
+	<body>
+
+		<% if notice %>
+		  <p class="alert alert-success"><%= notice %></p>
+		<% end %>
+		<% if alert %>
+		  <p class="alert alert-danger"><%= alert %></p>
+		<% end %>
+
+		<%= yield %>
+
+		<div class="footer-wrap">
+	        <div class="container footer">
+	          <!-- Example row of columns -->
+	          <div class="row footer">
+	            <div class="col-md-4">
+	              <h2>Subscribe</h2>
+	              <form>
+	                <input type="text" class="" name="emailaddress" value="" placeholder="Email Address" />
+	                  <input type="submit" name="Submit" class="btn btn-default" value="Subscribe" />
+	              </form>
+	           </div>
+	            <div class="col-md-4">
+	              <h2>Quick Links</h2>
+	              <ul>
+	                <li><a href="#">Link 1</a></li>
+	                <li><a href="#">Link 2</a></li>
+	                <li><a href="#">Link 3</a></li>
+	                <li><a href="#">Link 4</a></li>
+	              </ul>
+	            </div>
+	            
+	            <div class="col-md-4">
+	              <h2>Contact</h2>
+	              <p>123 Main Street</p>
+	              <p>Austin, TX 78704</p>
+	              <p><a href="mailto:info@company.org">info@company.com</a></p>
+	            </div>
+	          </div>
+
+	          <footer>
+	            <p>&copy; Company 2014</p>
+	          </footer>
+	        </div> <!-- /container -->
+	      </div><!--end footer-wrap-->
+
+	    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	    <!-- ZRSS Blog Feed-->
+	    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+	    
+	    <script src="/assets/jquery.zrssfeed.min.js" type="text/javascript"></script>
+	    
+	    <script type="text/javascript">
+		    $(document).ready(function () {
+		      $('#blog-wrap').rssfeed('http://freespace.io/feed/', {
+		        limit: 3
+		      });
+		    });
+	    </script>
+
+	</body>
 </html>
