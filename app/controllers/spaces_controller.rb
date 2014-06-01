@@ -19,9 +19,17 @@ class SpacesController < ApplicationController
   end
 
   def edit
+    @space = Space.find(params[:id])
   end
 
   def update
+    @space = Space.find(params[:id])
+    @space.update(space_params)
+    if current_user.is_admin?
+      redirect_to admin_spaces_path
+    else
+      redirect_to "/account"
+    end
   end
 
   def destroy

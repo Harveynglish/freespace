@@ -28,7 +28,7 @@ class ActivitiesController < ApplicationController
     if current_user.is_admin?
       redirect_to admin_activities_path
     else
-      redirect_to current_user
+      redirect_to "/account"
     end
   end
 
