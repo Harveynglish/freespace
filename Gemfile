@@ -47,6 +47,7 @@ end
 gem 'devise'
 gem 'figaro'
 gem 'carrierwave'
+gem 'mini_magick'
 
 gem 'rspec'
 gem 'pry-debugger'
