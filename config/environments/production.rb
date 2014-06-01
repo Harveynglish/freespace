@@ -1,5 +1,5 @@
 Freespaceatx::Application.configure do
-  config.action_mailer.default_url_options = { :host => '' }
+  config.action_mailer.default_url_options = { :host => 'http://freespaceatx.herokuapp.com/' }
 
   config.action_mailer.smtp_settings = {
     address: "smtp.gmail.com",
