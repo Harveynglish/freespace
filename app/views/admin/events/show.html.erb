@@ -1,0 +1,22 @@
+<div class="container content-wrap">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3>View Event <%= link_to "Edit", edit_admin_event_path(@event), class: "btn btn-primary btn-sm" %></h3>
+    </div>
+
+    <table class="table">
+      <tr><td>Activity:</td><td><%= link_to @activity.name, admin_activity_path(@activity) %></td></tr>
+      <tr><td>Starts on:</td><td><%= @event.formatted_start_time %></td></tr>
+      <tr><td>Ends on:</td><td><%= @event.formatted_end_time %></td></tr>
+      <tr><td>Contact name:</td><td><%= @event_contact_name %></td></tr>
+      <tr><td>Contact email:</td><td><%= @event_contact_email %></td></tr>
+      <tr><td>Space:</td>
+        <% if @event.space_id %>
+          <td><%= link_to @event.space.name, admin_space_path(@event.space) %></td></tr>
+          <tr><td>Space address:</td><td><%= @event.space.one_line_address %></td></tr>
+        <% else %>
+          <td><%= link_to "Add a space", edit_admin_event_path(@event), class: "btn btn-primary btn-xs", method: :get %></td></tr>
+        <% end %>
+    </table>
+  </div>
+</div>

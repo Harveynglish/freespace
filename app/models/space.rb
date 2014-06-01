@@ -1,9 +1,10 @@
 class Space < ActiveRecord::Base
-  validates :name, presence: true
+  validates_presence_of :name, :user_id, :address1
 
   belongs_to  :user
   has_many :available_times
   has_many :available_date_ranges
+  has_many :events
 
   scope :available_for_capacity_of, -> event { where("capacity >= ?", event.activity.capacity) }
   scope :available_for_date_range_of, -> event { where("available_date_ranges.start_date <= ? AND (available_date_ranges.end_date IS NULL OR available_date_ranges.end_date >= ?)", event.start_time.to_date, event.end_time.to_date) }
@@ -34,5 +35,10 @@ class Space < ActiveRecord::Base
     .available_for_capacity_of(event)
     .available_for_date_range_of(event)
     .available_for_late_night_time_of(event)
+  end
+
+  def one_line_address
+    address1 << " #{address2}" if address2.present?
+    "#{address1}, #{city}, #{state} #{zip}"
   end
 end

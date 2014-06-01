@@ -1,0 +1,54 @@
+<div class="container content-wrap">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h2>Event: <%= @activity.name %></h2>
+    </div>
+
+    <div class="container">
+      <%= render "form" %>
+    </div>
+
+    <% if @needs_space %>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h2>Available spaces for this event</h2>
+        </div>
+
+        <table class="table">
+          <tr>
+            <td>Name</td>
+            <td>Space ID</td>
+            <td>Address</td>
+            <td>Zip Code</td>
+            <td>Available Days/Times</td>
+            <td>Date Range</td>
+          </tr>
+          <% @available_spaces.each do |space| %>
+            <tr>
+              <td><%= space.name %></td>
+              <td><%= space.id %></td>
+              <td><%= space.address1 %></td>
+              <td><%= space.zip %></td>
+              <td>
+                <% if space.available_all_hours? %>
+                  24/7
+                <% else %>
+                    <% space.available_times.each do |time| %>
+                      <%= time.day.name %>: <%= time.formatted_start %> - <%= time.formatted_end %><br>
+                    <% end %>
+                <% end %>
+              </td>
+              <td>
+                <% space.available_date_ranges.each do |range| %>
+                  <%= range.formatted_start %> - <%= range.formatted_end %><br>
+                <% end %>
+              </td>
+            </tr>
+          <% end %>
+        </table>
+      </div>
+    <% else %>
+      </div>
+    <% end %>
+</div>

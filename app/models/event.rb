@@ -1,6 +1,10 @@
 class Event < ActiveRecord::Base
+  validates_presence_of :activity_id, :start_time, :end_time
+
   belongs_to :activity
   belongs_to :space
+
+  default_scope order(start_time: :asc)
 
   scope :unplaced, -> { where(space_id: nil) }
   scope :placed, -> { where("space_id IS NOT NULL") }
@@ -20,5 +24,13 @@ class Event < ActiveRecord::Base
   # Public: returns true if the end time of an event goes beyond midnight, else false
   def late_night?
     end_time_as_int < start_time_as_int
+  end
+
+  def formatted_start_time
+    start_time.strftime("%a %b %e, %Y @ %l:%M %P")
+  end
+
+  def formatted_end_time
+    end_time.strftime("%a %b %e, %Y @ %l:%M %P")
   end
 end

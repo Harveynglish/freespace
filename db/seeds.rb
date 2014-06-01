@@ -163,10 +163,7 @@ AvailableDateRange.create(space_id: 4,
                           start_date: Date.new(2014,5,1),
                           )
 
-
-
-
-
+["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"].each { |name| Day.create(name: name) }
 
 
 

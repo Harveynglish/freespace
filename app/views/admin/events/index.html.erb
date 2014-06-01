@@ -1,1 +1,42 @@
-<h1>Admin view of all events</h1>
+<div class="container content-wrap">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h2>Showing: <%= @only_unplaced ? 'Unplaced' : (@only_placed ? 'Placed' : 'All') %> Events</h2>
+
+      <% unless @only_unplaced %>
+        <h4><%= link_to "Only show events that still need a space", admin_events_path(only_unplaced: true) %></h4>
+      <% end %>
+
+      <% unless @only_placed %>
+        <h4><%= link_to "Only show events that have a space", admin_events_path(only_placed: true) %></h4>
+      <% end %>
+
+      <% if @only_unplaced || @only_placed %>
+        <h4><%= link_to "Show all events", admin_events_path %></h4>
+      <% end %>
+    </div>
+
+    <table class="table">
+      <tr>
+        <td>Activity</td>
+        <td>Space</td>
+        <td>Starts At</td>
+        <td>Ends At</td>
+      </tr>
+      <% @events.each do |event| %>
+        <tr>
+          <td><%= link_to event.activity.name, admin_activity_path(event.activity) %></td>
+          <% if !@only_unplaced && event.space_id %>
+            <td><%= link_to event.space.name, admin_space_path(event.space) %></td>
+          <% else %>
+            <td><%= button_to "Add a space", edit_admin_event_path(event), class: "btn btn-primary btn-xs", method: :get %></td>
+          <% end %>
+          <td><%= event.formatted_start_time %></td>
+          <td><%= event.formatted_end_time %></td>
+          <td><%= link_to "Edit", edit_admin_event_path(event) %></td>
+          <td><%= link_to "Delete", admin_event_path(event), data: { confirm: "Are you sure?" }, method: :delete %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
