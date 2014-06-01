@@ -51,3 +51,6 @@ gem 'rspec'
 gem 'pry-debugger'
 gem 'haml'
 gem 'simple_form'
+
+# Add gem for pagination
+gem 'will_paginate', '~> 3.0'
