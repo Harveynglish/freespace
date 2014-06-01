@@ -57,6 +57,11 @@
 
         		<div class="navbar-collapse collapse">
           			<ul class="nav navbar-nav navbar-right">
+                  <% if current_user.is_admin? %>
+                  <li><%= link_to 'Admin', admin_users_path %>
+                  <% end %>
+
+
                   <% if user_signed_in? %>
                   <li><%= link_to 'My Account', account_path %></li>
                   <li><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></li>

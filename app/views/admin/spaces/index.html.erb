@@ -9,6 +9,7 @@
       <td>Comments</td>
       <td>User</td>
       <% @spaces.each do |space| %>
+      <% if space.user %>
       <tr>
         <td><%= space.name %></td>
         <td><%= space.description %></td>
@@ -17,6 +18,7 @@
         <td><%= link_to "Edit Space", edit_space_path(space) %></td>
         <td><%= link_to "Delete Space", space_path(space), data: { confirm: "Are you sure?" }, method: :delete %></td>
       </tr>
+      <% end %>
       <% end %>
     </table>
     <%= will_paginate @spaces %>

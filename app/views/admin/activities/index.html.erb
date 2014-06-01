@@ -9,14 +9,16 @@
       <td>Comments</td>
       <td>User</td>
       <% @activities.each do |activity| %>
-      <tr>
-        <td><%= activity.name %></td>
-        <td><%= activity.description %></td>
-        <td><%= activity.comments %></td>
-        <td><%= link_to activity.user.name, admin_user_path(activity.user) %></td>
-        <td><%= link_to "Edit Activity", edit_activity_path(activity) %></td>
-        <td><%= link_to "Delete Activity", activity_path(activity), data: { confirm: "Are you sure?" }, method: :delete %></td>
-      </tr>
+        <% if activity.user %>
+          <tr>
+            <td><%= activity.name %></td>
+            <td><%= activity.description %></td>
+            <td><%= activity.comments %></td>
+            <td><%= link_to activity.user.name, admin_user_path(activity.user) %></td>
+            <td><%= link_to "Edit Activity", edit_activity_path(activity) %></td>
+            <td><%= link_to "Delete Activity", activity_path(activity), data: { confirm: "Are you sure?" }, method: :delete %></td>
+          </tr>
+        <% end %>
       <% end %>
     </table>
     <%= will_paginate @activities %>
