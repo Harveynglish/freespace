@@ -1,10 +1,31 @@
-%h3= @spaces.name
-%br/
-.pull-right
-  = link_to 'Edit', edit_space_path(@spaces), :class => 'btn btn-primary'
-  = link_to 'Destroy', space_path(@spaces), :method => :delete, :data => {:confirm => 'Are you sure you want to delete this?'},:class => 'btn btn-danger'
-%h3= @activities.name
-%br/
-.pull-right
-  = link_to 'Edit', edit_activity_path(@activities), :class => 'btn btn-primary'
-  = link_to 'Destroy', activity_path(@activities), :method => :delete, :data => {:confirm => 'Are you sure you want to delete this?'},:class => 'btn btn-danger'
+.booyah-box.col-xs-10.col-xs-offset-1
+  .panel.panel-default
+    .panel-heading My Spaces
+    %table.table
+      %td Name
+      %td Description
+      %td Comments
+      %td User
+      - @spaces.each do |space|
+        %tr
+          %td= space.name
+          %td= space.description
+          %td= space.comments
+          %td= link_to "Edit Space", edit_space_path(space)
+          %td= link_to "Delete Space", space_path(space), data: { confirm: "Are you sure?" }, method: :delete
+.booyah-box.col-xs-10.col-xs-offset-1
+  .panel.panel-default
+    .panel-heading My Activities
+    %table.table
+      %td Name
+      %td Description
+      %td Comments
+      %td User
+      - @activities.each do |activity|
+        %tr
+          %td= activity.name
+          %td= activity.description
+          %td= activity.comments
+          %td= link_to activity.user.name, admin_user_path(activity.user)
+          %td= link_to "Edit Activity", edit_activity_path(activity)
+          %td= link_to "Delete Activity", activity_path(activity), data: { confirm: "Are you sure?" }, method: :delete
