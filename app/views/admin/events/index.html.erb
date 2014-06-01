@@ -1,1 +1,35 @@
-<h1>Admin view of all events</h1>
+<h1><%= @only_unplaced ? 'Unplaced ' : (@only_placed ? 'Placed ' : '') %>Events</h1>
+
+<% unless @only_unplaced %>
+  <h3><%= link_to "Only show events that still need a space", admin_events_path(only_unplaced: true) %></h3>
+<% end %>
+
+<% unless @only_placed %>
+  <h3><%= link_to "Only show events that have a space", admin_events_path(only_placed: true) %></h3>
+<% end %>
+
+<% if @only_unplaced || @only_placed %>
+  <h3><%= link_to "Show all events", admin_events_path %></h3>
+<% end %>
+
+<table>
+  <tr>
+    <td>Activity</td>
+    <td>Space</td>
+    <td>Starts At</td>
+    <td>Ends At</td>
+  <% @events.each do |event| %>
+    <tr>
+      <td><%= link_to event.activity.name, admin_activity_path(event.activity) %></td>
+      <% if !@only_unplaced %>
+        <td><%= link_to event.space, admin_space_path(event.space) %></td>
+      <% else %>
+        <td><%= link_to "Add a space", edit_admin_event_path(event) %></td>
+      <% end %>
+      <td><%= event.start_time %></td>
+      <td><%= event.end_time %></td>
+      <td><%= link_to "Edit", edit_admin_event_path(event) %></td>
+      <td><%= link_to "Delete", admin_event_path(event), data: { confirm: "Are you sure?" }, method: :delete %></td>
+    </tr>
+  <% end %>
+</table>
