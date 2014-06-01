@@ -9,7 +9,6 @@ class User < ActiveRecord::Base
 
   has_many :spaces
   has_many :activities
-
   # def create_user(name, email, password)
 
   # end
