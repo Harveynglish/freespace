@@ -3,11 +3,20 @@ Freespaceatx::Application.routes.draw do
 
   root to: 'pages#index'
 
-  get '/account' => 'users#show'
+  get  '/account' => 'users#show'
+  get  '/account/edit' => 'users#edit'
+  post '/account/edit' => 'users#update'
 
   resources :activities
 
   resources :spaces
+
+  namespace :admin do
+    resources :users
+    resources :activities
+    resources :spaces
+    resources :events
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
