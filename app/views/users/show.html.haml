@@ -5,9 +5,10 @@
       %td Name
       %td Description
       %td Comments
-      %td User
+      %td Image
       - @spaces.each do |space|
         %tr
+          %img{src: space.image_url}
           %td= space.name
           %td= space.description
           %td= space.comments

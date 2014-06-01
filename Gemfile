@@ -46,6 +46,7 @@ end
 # gem 'debugger', group: [:development, :test]
 gem 'devise'
 gem 'figaro'
+gem 'carrierwave'
 
 gem 'rspec'
 gem 'pry-debugger'
