@@ -20,8 +20,20 @@ class Admin::UsersController < Admin::BaseController
   end
 
   def update
+    @user = User.find(params[:id])
+    @user.update!(user_params)
+    # if current_user.is_admin?
+      redirect_to admin_users_path
+    # else
+    #   redirect_to current_user
+    # end
   end
 
   def destroy
+  end
+
+  private
+  def user_params
+    params.require(:user).permit(:name, :email, :is_admin)
   end
 end
