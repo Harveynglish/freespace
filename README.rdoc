@@ -1,28 +1,23 @@
-== README
+== [freespace]ATX
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+What is [freespace]?
 
-Things you may want to cover:
+The [freespace] movement is an experiment in what is possible when a community shares the gift of physical space.
 
-* Ruby version
+It’s a gathering place for Austinites to come together, to create, teach, learn, and share the things that they are truly passionate about; to strengthen connections between individuals as well as communities through art, events, and long-term projects.
 
-* System dependencies
+A [freespace] breathes new life into an unused or underutilized space. It’s a space that’s free for the community to program as they wish, to what end is kind of the point of the experiment.
 
-* Configuration
+It’s a way to activate those dormant spaces with community-built programming and collaboration. It’s a blank canvas gifted to the community to create civic innovation.
 
-* Database creation
+A [freespace] is where people can come together to create change in their lives, their communities, and their world.
 
-* Database initialization
+We connect those with unused or underutilized space with the local community for civic innovation.
 
-* How to run the test suite
+- Backend:
 
-* Services (job queues, cache servers, search engines, etc.)
+* Ruby on Rails with Postgres database
 
-* Deployment instructions
+- Frontend:
 
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* Twitter Bootstrap
