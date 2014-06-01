@@ -1,4 +1,5 @@
 class Space < ActiveRecord::Base
   belongs_to  :user
-  belongs_to  :capacity
+  has_many :available_times
+  has_many :available_date_ranges
 end
