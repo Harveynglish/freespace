@@ -1,1 +1,19 @@
-<h1>Admin view of all spaces</h1>
+<h1>Spaces</h1>
+
+<table>
+  <td>Name</td>
+  <td>Description</td>
+  <td>Comments</td>
+  <td>User</td>
+  <% @spaces.each do |space| %>
+  <tr>
+    <td><%= space.name %></td>
+    <td><%= space.description %></td>
+    <td><%= space.comments %></td>
+    <!-- Add in admin_user_path as a link here to user admin page -->
+    <td><%= space.user.name %></td>
+    <td><%= button_to "Edit this Space", edit_space_path(space) %></td>
+    <td><%= button_to "Delete this Space", space_path(space), data: { confirm: "Are you sure?" }, method: :delete %></td>
+  </tr>
+  <% end %>
+</table>
