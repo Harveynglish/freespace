@@ -6,7 +6,7 @@ class SpacesController < ApplicationController
   end
 
   def create
-    @space = Space.create(space_params)
+    @space = current_user.spaces.create(space_params)
 
     if @space.valid?
       redirect_to action: 'thankyou'
@@ -25,6 +25,8 @@ class SpacesController < ApplicationController
   end
 
   def destroy
+    Space.destroy(params[:id])
+    redirect_to "/account"
   end
 
   def thankyou

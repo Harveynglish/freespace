@@ -6,7 +6,7 @@ class ActivitiesController < ApplicationController
   end
 
   def create
-    @activity = Activity.create(activity_params)
+    @activity = current_user.activities.create(activity_params)
 
     if @activity.valid?
       redirect_to action: 'thankyou'
@@ -25,6 +25,8 @@ class ActivitiesController < ApplicationController
   end
 
   def destroy
+    Activity.destroy(params[:id])
+    redirect_to "/account"
   end
 
   def thankyou
