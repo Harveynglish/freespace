@@ -7,6 +7,8 @@ Freespaceatx::Application.routes.draw do
   get  '/account/edit' => 'users#edit'
   post '/account/edit' => 'users#update'
 
+  get '/spaces/thankyou' => 'spaces#thankyou'
+  get '/activities/thankyou' => 'activities#thankyou'
 
   resources :activities
 

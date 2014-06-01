@@ -1,3 +1,4 @@
+<div class="container content-wrap">
 <h2>Edit <%= @user.name %></h2>
 
 <%= form_for [:admin, @user] do |f| %>
@@ -9,14 +10,7 @@
   <div><%= f.label :email %><br />
   <%= f.email_field :email, autocomplete: "off" %></div>
 
-  <div><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "off" %></div>
-
-  <div><%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
-
-  <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "off" %></div>
+  <div><%= f.label "Check to make admin" %><br /><%= f.check_box :is_admin %></div>
 
   <div><%= f.submit "Update" %></div>
 <% end %>
@@ -24,3 +18,4 @@
 <%= button_to "Delete this user", registration_path(@user), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
 <%= link_to "Back", :back %>
+</div>

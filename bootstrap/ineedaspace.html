@@ -1,114 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap 101 Template</title>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap 101 Template</title>
 
-    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway:400,700|Roboto+Slab:400,700|Roboto+Condensed:400italic,400,700' rel='stylesheet' type='text/css'>
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway:400,700|Roboto+Slab:400,700|Roboto+Condensed:400italic,400,700' rel='stylesheet' type='text/css'>
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/custom.css" rel="stylesheet">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
+      <![endif]-->
+    </head>
+    <body>
 
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="index.html">[Freespace]ATX</a>
-        </div>
-        <div class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right" role="form">
-            <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
-            </div>
-            <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
-          </form>
-        </div><!--/.navbar-collapse -->
-      </div>
-    </div>
-
-    <!--begin form-->
-    <div class="container content-wrap">
-      <div class="row">
-        <div class="col-md-12">
-
-          <form class="form-ineedaspace" role="form">
-            <h2 class="form-ineedaspace-heading">What are you looking for?</h2>
-            <input type="text" name="spacename" class="form-control" placeholder="Name of Space*" required autofocus>
-            <textarea name="description" class="form-control" placeholder="Description" cols="40" rows="5" ... ></textarea>
-            <!-- <input type="text" name="description" class="form-control" placeholder="Description"> -->
-            <div class="label">Capacity</div>
-            <select>
-              <option value="0-10">0-10</option>
-              <option value="11-50">11-50</option>
-              <option value="51-100">51-100</option>
-              <option value="100-200">100-200</option>
-              <option value="200-500">200-500</option>
-              <option value="500+">500+</option>
-            </select>
-
-            <input type="submit" name="submit" class="btn btn-lg btn-primary btn-block" value"Submit"/>
-          </form>
+      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">[ freespace ]ATX</a>
+          </div>
+          <div class="navbar-collapse collapse">
+            <form class="navbar-form navbar-right" role="form">
+              <div class="form-group">
+                <input type="text" placeholder="Email" class="form-control">
+              </div>
+              <div class="form-group">
+                <input type="password" placeholder="Password" class="form-control">
+              </div>
+              <button type="submit" class="btn btn-success">Sign in</button>
+            </form>
+          </div><!--/.navbar-collapse -->
         </div>
       </div>
-    </div> <!-- /container -->
 
-    <div class="footer-wrap">
-        <div class="container footer">
-          <!-- Example row of columns -->
-          <div class="row footer">
-            <div class="col-md-4">
-              <h2>Subscribe</h2>
-              <form>
-                <input type="text" class="" name="emailaddress" value="" placeholder="Email Address" />
-                  <input type="submit" name="Submit" class="btn btn-default" value="Subscribe" />
-              </form>
-           </div>
-            <div class="col-md-4">
-              <h2>Quick Links</h2>
+      <!--begin form-->
+      <div class="container content-wrap formpage ineedaspace">
+        <div class="row">
+          <div class="col-md-6">
+            <h1>STEP 1: What are you looking for?</h1>
+            <div class="indicator-wrap">
               <ul>
-                <li><a href="#">Link 1</a></li>
-                <li><a href="#">Link 2</a></li>
-                <li><a href="#">Link 3</a></li>
-                <li><a href="#">Link 4</a></li>
+                <li class="indicator active">&#8226;</li>
+                <li class="indicator inactive">&#8226;</li>
               </ul>
             </div>
-            
-            <div class="col-md-4">
-              <h2>Contact</h2>
-              <p>123 Main Street</p>
-              <p>Austin, TX 78704</p>
-              <p><a href="mailto:info@company.org">info@company.com</a></p>
+          </div>
+          <div class="col-md-6"></div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+
+            <form class="form-ineedaspace" role="form">
+              <input type="text" name="name" class="form-control" placeholder="Contact Name*" required autofocus>
+              <input type="text" name="orgname" class="form-control" placeholder="Organization" autofocus>
+              <input type="text" name="phonenumber" class="form-control" placeholder="Contact Phone Number" autofocus>
+              <input type="email" name="email" class="form-control" placeholder="Contact Email"  autofocus>
+              <textarea name="description" class="form-control" placeholder="Describe event" cols="40" rows="5" ... ></textarea>
+              <!-- <input type="text" name="description" class="form-control" placeholder="Description"> -->
+              <div class="label">Capacity</div>
+              <select>
+                <option value="0-10">0-20</option>
+                <option value="11-50">21-50</option>
+                <option value="51-100">51-100</option>
+                <option value="100-200">100-200</option>
+                <option value="200-500">200-500</option>
+                <option value="500+">500+</option>
+              </select>
+
+              <hr>
+
+              <input type="text" name="eventtime" class="form-control" placeholder="When do you want to hold your event" autofocus>
+              <label class="checkbox">
+                <div class="label"><p>To best match your project to a [ freespace ], it helps if you provide some options or a range of times that work for you.</p></div>
+                <label class="checkbox">
+                  <input type="checkbox" name="Morning" value="">Morning<br>
+                  <input type="checkbox" name="Afternoon" value="">Afternoon<br>
+                  <input type="checkbox" name="Evening" value="">Evening<br>
+                </label>
+
+                 <hr>
+
+                <input type="radio" name="frequency" value="one-time">One time<br>
+                <input type="radio" name="frequency" value="recurring">Recurring<br>
+
+                <hr>
+                <label class="checkbox">
+                  <input type="checkbox" name="volunteers" value="">I need volunteers to help me with my project<br>
+                </label>
+                <div class="label"><p>We help build teams, recruiting from within the diverse [ freespace ] network, and publicizing the project on our website, and also in our space.</p></div>
+                
+
+                <input type="submit" name="submit" class="btn btn-lg btn-primary btn-block" value"Submit"/>
+              </form>
+            </div>
+            <div class="col-md-6 copy">
+              <p>Looking for a [ freespace ] to transform into a community-driven hotbed of creativity where people can come to share and pursue their passions?</p>
+              <p>With a [ freespace ], you can host a wide array of events and projects, including but not limited to classes, music, art, yoga, silent discos, free bikeshare, community engagement and field trips, and more than a few silly costumes.</p>
+              <p>The power and success of [ freespace ] is a direct result of the energy freely contributed by a diverse range of everyday citizens - everything that happens here is created by someone like you.</p>
             </div>
           </div>
-
-          <footer>
-            <p>&copy; Company 2014</p>
-          </footer>
         </div> <!-- /container -->
-      </div><!--end footer-wrap-->
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.js"></script>
-  </body>
-</html>
+        <div class="footer-wrap">
+          <div class="container footer">
+            <!-- Example row of columns -->
+            <div class="row footer">
+              <div class="col-md-4">
+                <h2>Subscribe</h2>
+                <form>
+                  <input type="text" class="" name="emailaddress" value="" placeholder="Email Address" />
+                  <input type="submit" name="Submit" class="btn btn-default" value="Subscribe" />
+                </form>
+              </div>
+              <div class="col-md-4">
+                <h2>Quick Links</h2>
+                <ul>
+                  <li><a href="#">Link 1</a></li>
+                  <li><a href="#">Link 2</a></li>
+                  <li><a href="#">Link 3</a></li>
+                  <li><a href="#">Link 4</a></li>
+                </ul>
+              </div>
+
+              <div class="col-md-4">
+                <h2>Contact</h2>
+                <p>123 Main Street</p>
+                <p>Austin, TX 78704</p>
+                <p><a href="mailto:info@company.org">info@company.com</a></p>
+              </div>
+            </div>
+
+            <footer>
+              <p>&copy; Company 2014</p>
+            </footer>
+          </div> <!-- /container -->
+        </div><!--end footer-wrap-->
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+      </body>
+      </html>

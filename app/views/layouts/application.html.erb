@@ -49,12 +49,13 @@
             			<span class="icon-bar"></span>
           			</button>
 
-          			<a class="navbar-brand" href="/">[Freespace]ATX</a>
+          			<a class="navbar-brand" href="/">[freespace]ATX</a>
 
         		</div>
         		<div class="navbar-collapse collapse">
           			<ul class="nav navbar-nav navbar-right">
                   <% if user_signed_in? %>
+                  <li><%= link_to 'My Account', account_path %></li>
                   <li><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></li>
                   <% else %>
                   <li><%= link_to 'Sign in', new_user_session_path %></li>

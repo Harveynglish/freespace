@@ -23,3 +23,6 @@
 
 */.DS_Store
 .DS_Store
+
+# Ignore all uploads of pics
+public/uploads
