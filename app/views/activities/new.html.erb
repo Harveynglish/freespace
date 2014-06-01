@@ -3,20 +3,28 @@
   <div class="row">
     <div class="col-md-12">
 
-      <%= form_for(@activity, url: {action: "create"} ) do |f| %>
-
+      <%= form_for(@activity, url: {action: "create"}, :html => {:class => "form-ineedaspace"}) do |f| %>
 
         <h2 class="form-ineedaspace-heading">What are you looking for?</h2>
-        <%= f.text_field :name, autofocus: true, placeholder: "Name of Space*", :class => 'form-control' %>
 
-        <%= f.text_area :description, placeholder: "Description", :class => 'form-control', :cols => "40", :rows => "5" %>
-
+        <%= f.text_field :name, :id=>"spacename", :class => 'form-control', placeholder: "Name of Space*", required: true, autofocus: true %>
+        <!--%= f.text_field :organization, placeholder: "Organization", :class => 'form-control' %-->
+        <!--%= f.text_field :organization, placeholder: "Phone Number", :class => 'form-control' %-->
+        <!--%= f.text_field :email, placeholder: "Email*", :class => 'form-control' %-->
+        <%= f.text_area :description, placeholder: "Describe event", :class => 'form-control', :cols => "40", :rows => "10" %>
         <%= f.text_field :capacity, placeholder: "Capacity", :class => 'form-control' %>
+        <%= f.text_field :capacity, placeholder: "When do you want to have the event", :class => 'form-control' %>
+        <!--%= f.check_box :volunteer, placeholder: "Has Volunteer?", :class => 'form-control' %-->
+
+
+
+
+
+
+
 
         <%= f.submit "Submit", :class => "btn btn-lg btn-primary btn-block" %>
       <% end %>
     </div>
   </div>
 </div> <!-- /container -->
-
-

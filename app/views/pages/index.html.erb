@@ -1,40 +1,3 @@
-<!--<h1>Menu Items:</h1>-->
-	
-	<!-- include javascript SDK  once :: required by facebook widget -->
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "http://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.0";
-      //js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.0";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
-
-	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="index.html">[Freespace]ATX</a>
-        </div>
-        <div class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right" role="form">
-            <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
-            </div>
-            <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
-          </form>
-        </div><!--/.navbar-collapse -->
-      </div>
-	</div>
 
 	<!-- Carousel
     ================================================== -->
@@ -46,8 +9,12 @@
         <li data-target="#myCarousel" data-slide-to="2"></li>
       </ol>
       <div class="carousel-btn-wrap">
-        <a class="btn btn-lg btn-primary" href="ihaveaspace.html" role="button">I have a space</a>
+
+        <%= link_to 'I have a space', space_path('new'), :class => "btn btn-lg btn-primary", :role=> "button" %>
+
         <a class="btn btn-lg btn-primary" href="ineedaspace.html" role="button">I need a space</a>
+        <!--%= link_to 'I need a space', activity('new'), :class => "btn btn-lg btn-primary", :role=> "button" %-->
+
       </div>
       <div class="carousel-caption-wrap">
         <p>[freespace] ATX fosters creativity, community, and civic innovation through the gift of free space. We connect those with unused or underutilized space with the local community for civic innovation.</p>
@@ -110,19 +77,19 @@
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-md-4">
-          <img src="http:/placehold.it/300x200" alt="">
+          <img src="http://placehold.it/300x200" alt="">
           <h3>For Community</h3>
           <p>A [freespace] is free, thus inclusive to people from all different backgrounds, cultures, and lifestyles. A [freespace] provides people with the space and permission to pursue their passions and feed off of similar energy.</p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div>
         <div class="col-md-4">
-          <img src="http:/placehold.it/300x200" alt="">
+          <img src="http://placehold.it/300x200" alt="">
           <h3>For Property Owners</h3>
           <p>A [freespace] adds activity to any space, increasing foot traffic and highlighting potential uses for long-term tenants.</p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
        </div>
         <div class="col-md-4">
-          <img src="http:/placehold.it/300x200" alt="">
+          <img src="http://placehold.it/300x200" alt="">
           <h3>For City Government</h3>
           <p>A [freespace] provides a new way for citizens to shape their cities.</p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
