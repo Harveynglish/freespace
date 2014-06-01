@@ -19,9 +19,17 @@ class ActivitiesController < ApplicationController
   end
 
   def edit
+    @activity = Activity.find(params[:id])
   end
 
   def update
+    @activity = Activity.find(params[:id])
+    @activity.update(activity_params)
+    if current_user.is_admin?
+      redirect_to admin_activities_path
+    else
+      redirect_to current_user
+    end
   end
 
   def destroy

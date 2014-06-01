@@ -1,1 +1,25 @@
-<h1>Activities Edit Page</h1>
+<!--begin form-->
+<div class="container content-wrap">
+  <div class="row">
+    <div class="col-md-12">
+
+      <%= form_for(@activity, url: {action: "update"}, :html => {:class => "form-ineedaspace"}) do |f| %>
+
+        <h2 class="form-ineedaspace-heading">What are you looking for?</h2>
+
+        <%= f.text_field :name, :id=>"spacename", :class => 'form-control', placeholder: @activity.name, required: true, autofocus: true %>
+        <!--%= f.text_field :organization, placeholder: "Organization", :class => 'form-control' %-->
+        <!--%= f.text_field :organization, placeholder: "Phone Number", :class => 'form-control' %-->
+        <!--%= f.text_field :email, placeholder: "Email*", :class => 'form-control' %-->
+        <%= f.label "Event description" %>
+        <%= f.text_area :description, placeholder: @activity.description, :class => 'form-control', :cols => "40", :rows => "10" %>
+        <%= f.label "What is capacity for your event?" %>
+        <%= f.text_field :capacity, placeholder: @activity.capacity, :class => 'form-control' %>
+        <%= f.label "When do you want this activity to take place?" %>
+        <%= f.text_field :when, placeholder: @activity.when, :class => 'form-control' %>
+        <!--%= f.check_box :volunteer, placeholder: "Has Volunteer?", :class => 'form-control' %-->
+        <%= f.submit "Submit", :class => "btn btn-lg btn-primary btn-block" %>
+      <% end %>
+    </div>
+  </div>
+</div> <!-- /container -->
