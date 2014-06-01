@@ -9,7 +9,7 @@ class SpacesController < ApplicationController
     @space = Space.create(space_params)
 
     if @space.valid?
-      redirect_to root_path
+      redirect_to action: 'thankyou'
     else
       render :new, :status => :unprocessable_entity
     end
@@ -25,6 +25,9 @@ class SpacesController < ApplicationController
   end
 
   def destroy
+  end
+
+  def thankyou
   end
 
   private
