@@ -1,6 +1,7 @@
 <div class="container content-wrap">
   <a href=<%= admin_users_path %> class="btn btn-default btn-info admin-buttons">Admin Users</a>
   <a href=<%= admin_spaces_path %> class="btn btn-default btn-info admin-buttons">Admin Spaces</a>
+  <a href=<%= admin_events_path %> class="btn btn-default btn-info admin-buttons">Admin Events</a>
   <div class="panel panel-default">
     <div class="panel-heading">Activities Admin Page</div>
     <table class="table">
@@ -8,6 +9,12 @@
       <td>Description</td>
       <td>Comments</td>
       <td>User</td>
+      <td>Capacity</td>
+      <td>Volunteers?</td>
+      <td>Admin Notes</td>
+      <td>Edit</td>
+      <td>Delete</td>
+      <td>Alternate Contact</td>
       <% @activities.each do |activity| %>
         <% if activity.user %>
           <tr>
@@ -19,6 +26,7 @@
             <td><%= link_to "Delete Activity", activity_path(activity), data: { confirm: "Are you sure?" }, method: :delete %></td>
           </tr>
         <% end %>
+
       <% end %>
     </table>
     <%= will_paginate @activities %>

@@ -43,14 +43,8 @@
         <%= f.label "Alternate Contact?" %>
         <%= f.check_box :alternate_contact %>
 
-        <% if current_user.is_admin? %>
-        <%= f.label "Admin Notes" %>
-        <%= f.text_field :admin_notes, placeholder: @space.admin_notes, :class => 'form-control' %>
-        <% end %>
-
         <%= f.submit "Submit", :class => "btn btn-lg btn-primary btn-block" %>
       <% end %>
     </div>
   </div>
 </div> <!-- /container -->
-
