@@ -26,6 +26,5 @@
           %td= activity.name
           %td= activity.description
           %td= activity.comments
-          %td= link_to activity.user.name, admin_user_path(activity.user)
           %td= link_to "Edit Activity", edit_activity_path(activity)
           %td= link_to "Delete Activity", activity_path(activity), data: { confirm: "Are you sure?" }, method: :delete
