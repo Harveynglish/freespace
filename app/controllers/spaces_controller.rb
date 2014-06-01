@@ -16,7 +16,6 @@ class SpacesController < ApplicationController
   end
 
   def show
-    @space = Space.all
   end
 
   def edit
@@ -34,7 +33,9 @@ class SpacesController < ApplicationController
   end
 
   def destroy
-    Space.destroy(params[:id])
+    if current_user.spaces.find(params[:id]) || current_user.is_admin?
+      Space.destroy(params[:id])
+    end
     redirect_to "/account"
   end
 

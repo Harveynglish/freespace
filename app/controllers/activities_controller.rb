@@ -33,7 +33,9 @@ class ActivitiesController < ApplicationController
   end
 
   def destroy
-    Activity.destroy(params[:id])
+    if current_user.spaces.find(params[:id]) || current_user.is_admin?
+      Activity.destroy(params[:id])
+    end
     redirect_to "/account"
   end
 
