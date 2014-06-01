@@ -9,7 +9,7 @@ class ActivitiesController < ApplicationController
     @activity = Activity.create(activity_params)
 
     if @activity.valid?
-      redirect_to root_path
+      redirect_to action: 'thankyou'
     else
       render :new, :status => :unprocessable_entity
     end
@@ -25,6 +25,9 @@ class ActivitiesController < ApplicationController
   end
 
   def destroy
+  end
+
+  def thankyou
   end
 
   private
