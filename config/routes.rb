@@ -3,7 +3,7 @@ Freespaceatx::Application.routes.draw do
 
   root to: 'pages#index'
 
-  get '/account' => 'user#show'
+  get '/account' => 'users#show'
 
   resources :activities
 
