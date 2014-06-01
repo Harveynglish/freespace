@@ -1,5 +1,5 @@
 class SpacesController < ApplicationController
-  before_action :authenticate_user!, :only => [:new, :create, :edit, :update, :destroy]
+  # before_action :authenticate_user!, :only => [:new, :create, :edit, :update, :destroy]
 
   def new
     @space = Space.new
@@ -42,7 +42,7 @@ class SpacesController < ApplicationController
 
   private
   def space_params
-    params.require(:space).permit(:name, :address1, :address2, :city, :state, :zip, :description, :capacity_id)
+    params.require(:space).permit(:name, :address1, :address2, :city, :state, :zip, :description, :capacity, :available_all_hours, :alternate_contact)
   end
 
 end
