@@ -16,6 +16,7 @@ class SpacesController < ApplicationController
   end
 
   def show
+    @space = Space.all
   end
 
   def edit
