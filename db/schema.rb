@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140601035008) do
+ActiveRecord::Schema.define(version: 20140601152124) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20140601035008) do
     t.text     "admin_notes"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "when"
   end
 
   create_table "available_date_ranges", force: true do |t|
@@ -44,8 +45,8 @@ ActiveRecord::Schema.define(version: 20140601035008) do
   create_table "available_times", force: true do |t|
     t.integer  "space_id"
     t.integer  "day_id"
-    t.time     "start_time"
-    t.time     "end_time"
+    t.integer  "start_time"
+    t.integer  "end_time"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -76,7 +77,7 @@ ActiveRecord::Schema.define(version: 20140601035008) do
     t.text     "comments"
     t.float    "latitude"
     t.float    "longitude"
-    t.boolean  "always_available"
+    t.boolean  "available_all_hours"
     t.boolean  "alternate_contact"
     t.string   "contact_name"
     t.string   "contact_organization"

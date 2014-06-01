@@ -1,4 +1,5 @@
 class ActivitiesController < ApplicationController
+  before_action :authenticate_user!, :only => [:new, :create, :edit, :update, :destroy]
 
   def new
     @activity = Activity.new
@@ -7,7 +8,11 @@ class ActivitiesController < ApplicationController
   def create
     @activity = Activity.create(activity_params)
 
-    redirect_to "/"
+    if @activity.valid?
+      redirect_to root_path
+    else
+      render :new, :status => :unprocessable_entity
+    end
   end
 
   def show
@@ -24,7 +29,7 @@ class ActivitiesController < ApplicationController
 
   private
   def activity_params
-    params.require(:activity).permit(:name, :description, :capactity)
+    params.require(:activity).permit(:name, :description, :capacity, :when)
   end
 
 end
