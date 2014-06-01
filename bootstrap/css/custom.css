@@ -66,6 +66,57 @@
   display: inline;
   line-height: 2;
 }
+.homepage .projectcontact .form-control {
+  border-radius:0;
+  margin-bottom: 10px;
+}
+/****************************
+**      FORM PAGES     **
+****************************/
+.formpage .indicator-wrap {
+
+}
+.formpage .indicator-wrap ul {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.formpage .indicator-wrap li {
+  list-style: inside; 
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  font-size: 24px;
+}
+.formpage .indicator-wrap li.active {
+    color: #f21700;
+} 
+.formpage .indicator-wrap li.inactive {
+    color: #999;
+} 
+/****************************
+**      IHAVEASPACE     **
+****************************/
+.ihaveaspace  h1{
+  color: #f21700;
+  font-family: "Roboto Slab";
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.ihaveaspace .copy p {
+  color: #f21700;
+  font-family: "Roboto Slab";
+  font-size: 24px;
+  text-align: left;
+  margin-bottom: 40px;
+  max-width: 340px;
+}
+.form-control {
+  border: 1px solid #f21700;
+  border-radius: 6px;
+}
 .projectcontact {
 
 }
@@ -157,7 +208,7 @@ footer p {
   margin-right: 0;
 }
 .form-ihaveaspace #daysoftheweek .checkbox {
-  line-height: 25px;
+  line-height: 30px;
   margin-top: 0;
 }
 .form-ihaveaspace .slider-wrap {
@@ -172,7 +223,7 @@ footer p {
   width: 40px;
   display: inline-block;
   padding: 5px;
-  margin: 0;
+  margin: 0 0 5px 0;
   height: 25px;
 }
 .form-ineedaspace {
