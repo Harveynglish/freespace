@@ -3,8 +3,8 @@ class CreateAvailableTimes < ActiveRecord::Migration
     create_table :available_times do |t|
       t.belongs_to  :space
       t.belongs_to  :day
-      t.time        :start_time
-      t.time        :end_time
+      t.integer     :start_time
+      t.integer     :end_time
 
       t.timestamps
     end
