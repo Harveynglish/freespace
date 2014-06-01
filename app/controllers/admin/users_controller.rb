@@ -1,6 +1,6 @@
 class Admin::UsersController < Admin::BaseController
   def index
-    @users = User.order(:id).all
+    @users = User.order(:id).paginate(:page => params[:page], :per_page => 30)
   end
 
   def new
