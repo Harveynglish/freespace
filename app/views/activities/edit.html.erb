@@ -5,7 +5,7 @@
 
       <%= form_for(@activity, url: {action: "update"}, :html => {:class => "form-ineedaspace"}) do |f| %>
 
-        <h2 class="form-ineedaspace-heading">What are you looking for?</h2>
+        <h2 class="form-ineedaspace-heading">Edit your activity</h2>
 
         <%= f.text_field :name, :id=>"spacename", :class => 'form-control', placeholder: @activity.name, required: true, autofocus: true %>
         <!--%= f.text_field :organization, placeholder: "Organization", :class => 'form-control' %-->
