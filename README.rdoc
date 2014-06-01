@@ -1,6 +1,6 @@
 == [freespace]ATX
 
-What is [freespace]?
+=What is [freespace]?
 
 The [freespace] movement is an experiment in what is possible when a community shares the gift of physical space.
 
@@ -14,10 +14,10 @@ A [freespace] is where people can come together to create change in their lives,
 
 We connect those with unused or underutilized space with the local community for civic innovation.
 
-- Backend:
+------------------------------------------------------------
 
+Backend:
 * Ruby on Rails with Postgres database
 
-- Frontend:
-
+Frontend:
 * Twitter Bootstrap
