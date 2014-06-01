@@ -1,17 +1,18 @@
-<h1>Users Admin Page</h1>
-
-<table>
-  <tr>
+<div class="panel panel-default">
+  <div class="panel-heading">User Admin Page</div>
+  <table class="table">
     <td>Name</td>
     <td>Email</td>
     <td>Admin?</td>
-  <% @users.each do |user| %>
-    <tr>
-      <td><%= link_to user.name, admin_user_path(user) %></td>
-      <td><%= mail_to user.email, user.email %></td>
-      <td><%= user.is_admin ? "X" : "" %></td>
-      <td><%= link_to "Edit", edit_admin_user_path(user) %></td>
-      <td><%= link_to "Delete", admin_user_path(user), data: { confirm: "Are you sure?" }, method: :delete %></td>
-    </tr>
-  <% end %>
-</table>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= link_to user.name, admin_user_path(user) %></td>
+        <td><%= mail_to user.email, user.email %></td>
+        <td><%= user.is_admin ? "X" : "" %></td>
+        <td><%= link_to "Edit", edit_admin_user_path(user) %></td>
+        <td><%= link_to "Delete", admin_user_path(user), data: { confirm: "Are you sure?" }, method: :delete %></td>
+      </tr>
+    <% end %>
+  </table>
+  </div>
+</div>

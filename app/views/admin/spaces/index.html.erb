@@ -1,18 +1,20 @@
-<h1>Spaces Admin Page</h1>
-
-<table>
-  <td>Name</td>
-  <td>Description</td>
-  <td>Comments</td>
-  <td>User</td>
-  <% @spaces.each do |space| %>
-  <tr>
-    <td><%= space.name %></td>
-    <td><%= space.description %></td>
-    <td><%= space.comments %></td>
-    <td><%= link_to space.user.name, admin_user_path(space.user) %></td>
-    <td><%= link_to "Edit Space", edit_space_path(space) %></td>
-    <td><%= link_to "Delete Space", space_path(space), data: { confirm: "Are you sure?" }, method: :delete %></td>
-  </tr>
-  <% end %>
-</table>
+<div class="panel panel-default">
+  <div class="panel-heading">Spaces Admin Page</div>
+  <table class="table">
+    <td>Name</td>
+    <td>Description</td>
+    <td>Comments</td>
+    <td>User</td>
+    <% @spaces.each do |space| %>
+    <tr>
+      <td><%= space.name %></td>
+      <td><%= space.description %></td>
+      <td><%= space.comments %></td>
+      <td><%= link_to space.user.name, admin_user_path(space.user) %></td>
+      <td><%= link_to "Edit Space", edit_space_path(space) %></td>
+      <td><%= link_to "Delete Space", space_path(space), data: { confirm: "Are you sure?" }, method: :delete %></td>
+    </tr>
+    <% end %>
+  </table>
+  </div>
+</div>
