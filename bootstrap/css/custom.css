@@ -1,54 +1,129 @@
+/****************************
+**      BASE LAYOUT      **
+****************************/
 .navbar {
   margin-bottom: 0;
+}
+.navbar-brand {
+  color: #fff;
+  font-family: "Montserrat";
+  font-size: 30px;
+}
+/****************************
+**      HOMEPAGE     **
+****************************/
+.carousel-inner>.item>a>img, 
+.carousel-inner>.item>img {
+  height: auto;
+}
+.homepage .about {
+  margin-top: 40px;
+}
+.homepage .about h3 {
+  color: #f21700;
+  font-size: 30px;
+  font-weight: bold;
+}
+.homepage .about p {
+  color: #f21700;
+}
+
+.homepage .promo-banner-wrap {
+  background-color: #f21700;
+  color: #fff;
+}
+.homepage .promo-banner-wrap h3 {
+  color: #fff;
+  font-family: "Roboto Slab";
+  font-size: 30px;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.homepage .promo-banner-wrap p {
+  color: #fff;
+}
+.homepage .quote-wrap {
+  position: relative;
+  min-height: 234px;
+}
+.homepage .quote-wrap .bg-container img{
+  display: block;
+  min-width: 100%;
+  position: absolute;
+  left: 0;
+  top:0;
+}
+.homepage .quote {
+  padding-top: 40px;
+}
+.homepage .quote h4 {
+  color: #f21700;
+  font-family: "Montserrat";
+  font-size: 24px;
+  background:#fff;
+  padding: 5px;
+  display: inline;
+  line-height: 2;
+}
+.projectcontact {
+
+}
+.projectcontact p {
+  color: #f21700;
+  font-family: "Roboto Slab";
+  font-size: 32px;
+  text-align: center;
+  padding: 20px 40px;
 }
 .social-widgets .row {
   padding: 40px 0 0 0;
 }
 .social-widgets .row.content {
-  padding: 0 0 40px 0;
   min-height: 550px;
+  padding: 0 0 40px 0;
 }
 .social-widgets .widget-wrap {
-  height: 400px;
   width: 300px;
+  height: 400px;
   margin: 0 auto;
 }
 .tagline .row {
   padding: 40px 0;
 }
 .tagline h4 {
-  text-align: center;
   max-width: 800px;
   margin: 0 auto;
   font-size: 22px;
+  text-align: center;
 }
 .promo-banner .row {
   padding: 40px 0;
 }
 .promo-banner img {
-  width: 300px;
-  margin-left: auto;
-  margin-right: auto;
+
 }
 .footer-wrap {
-  background-image: -webkit-linear-gradient(top, rgba(26, 26, 26, 0.8) 0%, rgba(0, 0, 0, 0.8) 100%);
-  background-image: -o-linear-gradient(top, rgba(26, 26, 26, 0.8) 0%, rgba(0, 0, 0, 0.8) 100%);
-  background-image: linear-gradient(to bottom, rgba(26, 26, 26, 0.8) 0%, rgba(0, 0, 0, 0.8) 100%);
+  background-image: -webkit-linear-gradient(top, #1a1a1a 0%, #000 100%);
+  background-image:      -o-linear-gradient(top, #1a1a1a 0%, #000 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#1a1a1a), to(#000));
+  background-image:         linear-gradient(to bottom, #1a1a1a 0%, #000 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff1a1a1a', endColorstr='#ff000000', GradientType=0);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cc1a1a1a', endColorstr='#cc000000', GradientType=0);
 }
 .footer-wrap .footer-wrap > .active > a {
-  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(6, 6, 6, 0.8) 100%);
-  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(6, 6, 6, 0.8) 100%);
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(6, 6, 6, 0.8) 100%);
+  background-image: -webkit-linear-gradient(top, #000 0%, #060606 100%);
+  background-image:      -o-linear-gradient(top, #000 0%, #060606 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#000), to(#060606));
+  background-image:         linear-gradient(to bottom, #000 0%, #060606 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff000000', endColorstr='#ff060606', GradientType=0);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cc000000', endColorstr='#cc060606', GradientType=0);
-  -webkit-box-shadow: inset 0 3px 9px rgba(0, 0, 0, 0.25);
-  box-shadow: inset 0 3px 9px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: inset 0 3px 9px rgba(0, 0, 0, .25);
+          box-shadow: inset 0 3px 9px rgba(0, 0, 0, .25);
 }
 .footer-wrap .footer-wrap,
 .footer-wrap .footer-wrap > li > a {
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, .25);
 }
 .footer {
   color: #fff;
@@ -59,7 +134,9 @@
 footer p {
   font-size: 10px;
 }
-/* form pages */
+/****************************
+**      FORMS     **
+****************************/
 .content-wrap {
   padding: 120px 0 40px 0;
 }
@@ -76,6 +153,28 @@ footer p {
 .form-ihaveaspace select {
   margin-bottom: 10px;
 }
+.form-ihaveaspace #daysoftheweek col {
+  margin-right: 0;
+}
+.form-ihaveaspace #daysoftheweek .checkbox {
+  line-height: 25px;
+  margin-top: 0;
+}
+.form-ihaveaspace .slider-wrap {
+  padding: 0;
+  margin: 0;
+}
+.form-ihaveaspace .slider-wrap .row {
+  padding: 0;
+  margin: 0;
+}
+.form-ihaveaspace .slider-wrap .form-control {
+  width: 40px;
+  display: inline-block;
+  padding: 5px;
+  margin: 0;
+  height: 25px;
+}
 .form-ineedaspace {
   max-width: 430px;
   padding: 15px;
@@ -83,11 +182,22 @@ footer p {
 }
 .form-ineedaspace .label {
   color: #000;
+  text-align: left;
+  white-space: normal!important;
 }
 .form-ineedaspace .form-control,
 .form-ineedaspace img,
 .form-ineedaspace select {
   margin-bottom: 10px;
+}
+/*thankyou pages*/
+.thankyou {
+  max-width: 900px;
+  margin: 60px auto;
+  text-align: center;
+}
+.col-wrap {
+  margin-bottom: 60px;
 }
 /*dashboard*/
 .col-md-offset-2 {
