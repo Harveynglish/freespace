@@ -3,9 +3,13 @@ Freespaceatx::Application.routes.draw do
 
   root to: 'pages#index'
 
+
+  get '/account' => 'users#show'
+
   get  '/account' => 'users#show'
   get  '/account/edit' => 'users#edit'
   post '/account/edit' => 'users#update'
+
 
   resources :activities
 
