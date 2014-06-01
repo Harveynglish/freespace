@@ -1,0 +1,15 @@
+.booyah-box.col-xs-10.col-xs-offset-1
+  %h2 Sign up
+  %br/
+  = simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+    = f.error_notification
+    .form-inputs
+      = f.input :name, required: true, autofocus: true
+      = f.input :email, required: true, autofocus: true
+      = f.input :password, required: true
+      = f.input :password_confirmation, required: true
+    %br/
+    .form-actions
+      = f.button :submit, "Sign up", :class => 'btn btn-primary'
+  %br/
+  = render "devise/shared/links"
