@@ -1,6 +1,6 @@
 class Admin::ActivitiesController < Admin::BaseController
   def index
-    @activities = Activity.all
+    @activities = Activity.order('created_at DESC').paginate(:page => params[:page], :per_page => 30)
   end
 
   def new
