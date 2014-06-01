@@ -20,17 +20,15 @@ ActiveRecord::Schema.define(version: 20140601035008) do
     t.integer  "user_id"
     t.string   "name"
     t.text     "description"
-    t.integer  "capacity_id"
+    t.integer  "capacity"
+    t.boolean  "volunteers_needed"
     t.text     "comments"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "availabilities", force: true do |t|
-    t.integer  "space_id"
-    t.integer  "day_id"
-    t.time     "start_time"
-    t.time     "end_time"
+    t.boolean  "alternate_contact"
+    t.string   "contact_name"
+    t.string   "contact_organization"
+    t.string   "contact_phone"
+    t.string   "contact_email"
+    t.text     "admin_notes"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -43,8 +41,13 @@ ActiveRecord::Schema.define(version: 20140601035008) do
     t.datetime "updated_at"
   end
 
-  create_table "capacities", force: true do |t|
-    t.string "range"
+  create_table "available_times", force: true do |t|
+    t.integer  "space_id"
+    t.integer  "day_id"
+    t.time     "start_time"
+    t.time     "end_time"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "days", force: true do |t|
@@ -54,9 +57,8 @@ ActiveRecord::Schema.define(version: 20140601035008) do
   create_table "events", force: true do |t|
     t.integer  "space_id"
     t.integer  "activity_id"
-    t.date     "date"
-    t.time     "start_time"
-    t.time     "end_time"
+    t.datetime "start_time"
+    t.datetime "end_time"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -70,10 +72,17 @@ ActiveRecord::Schema.define(version: 20140601035008) do
     t.string   "state"
     t.string   "zip"
     t.text     "description"
-    t.integer  "capacity_id"
+    t.integer  "capacity"
     t.text     "comments"
     t.float    "latitude"
     t.float    "longitude"
+    t.boolean  "always_available"
+    t.boolean  "alternate_contact"
+    t.string   "contact_name"
+    t.string   "contact_organization"
+    t.string   "contact_phone"
+    t.string   "contact_email"
+    t.text     "admin_notes"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -89,14 +98,13 @@ ActiveRecord::Schema.define(version: 20140601035008) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "name"
-    t.boolean  "is_admin"
     t.string   "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
-    t.string   "unconfirmed_email"
+    t.string   "name"
+    t.boolean  "is_admin"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree
