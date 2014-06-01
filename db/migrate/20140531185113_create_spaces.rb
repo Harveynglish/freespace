@@ -9,10 +9,17 @@ class CreateSpaces < ActiveRecord::Migration
       t.string      :state
       t.string      :zip
       t.text        :description
-      t.references  :capacity
+      t.integer     :capacity
       t.text        :comments
       t.float       :latitude
       t.float       :longitude
+      t.boolean     :always_available
+      t.boolean     :alternate_contact
+      t.string      :contact_name
+      t.string      :contact_organization
+      t.string      :contact_phone
+      t.string      :contact_email
+      t.text        :admin_notes
 
       t.timestamps
     end

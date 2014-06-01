@@ -1,4 +1,18 @@
 
+<!--<h1>Menu Items:</h1>-->
+
+	<!-- include javascript SDK  once :: required by facebook widget -->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "http://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.0";
+      //js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+
 	<!-- Carousel
     ================================================== -->
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -7,13 +21,18 @@
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
         <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+        <li data-target="#myCarousel" data-slide-to="5"></li>
       </ol>
       <div class="carousel-btn-wrap">
 
+
         <%= link_to 'I have a space', space_path('new'), :class => "btn btn-lg btn-primary", :role=> "button" %>
 
-        <a class="btn btn-lg btn-primary" href="ineedaspace.html" role="button">I need a space</a>
-        <!--%= link_to 'I need a space', activity('new'), :class => "btn btn-lg btn-primary", :role=> "button" %-->
+        <%= link_to 'I need a space', activity_path('new'), :class => "btn btn-lg btn-primary", :role=> "button" %>
+
+
 
       </div>
       <div class="carousel-caption-wrap">
@@ -32,7 +51,7 @@
           <img data-src="holder.js/1400x600/auto/#666:#6a6a6a/text:Second slide" alt="Second slide" src="/assets/slider/249041_433426753420079_1584947978_n.jpg" height="960" width="960">
           <div class="container">
             <div class="carousel-caption">
-              
+
             </div>
           </div>
         </div>
@@ -40,7 +59,7 @@
           <img data-src="holder.js/1400x600/auto/#555:#5a5a5a/text:Third slide" alt="Third slide" src="/assets/slider/431910_435887056507382_1806420912_n.jpg" height="355" width="960">
           <div class="container">
             <div class="carousel-caption">
-              
+
             </div>
           </div>
         </div>
@@ -48,7 +67,7 @@
           <img data-src="holder.js/1400x600/auto/#555:#5a5a5a/text:Third slide" alt="Third slide" src="/assets/slider/603056_440281882734566_353252086_n.jpg" height="569" width="960">
           <div class="container">
             <div class="carousel-caption">
-              
+
             </div>
           </div>
         </div>
@@ -56,7 +75,7 @@
           <img data-src="holder.js/1400x600/auto/#555:#5a5a5a/text:Third slide" alt="Third slide" src="/assets/slider/943085_439820339447387_519552234_n.jpg" height="720" width="960">
           <div class="container">
             <div class="carousel-caption">
-              
+
             </div>
           </div>
         </div>
@@ -64,7 +83,7 @@
           <img data-src="holder.js/1400x600/auto/#555:#5a5a5a/text:Third slide" alt="Third slide" src="/assets/slider/983968_441533065942781_890423921_n.jpg" height="736" width="736">
           <div class="container">
             <div class="carousel-caption">
-              
+
             </div>
           </div>
         </div>
