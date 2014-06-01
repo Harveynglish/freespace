@@ -8,10 +8,10 @@
       %td Image
       - @spaces.each do |space|
         %tr
-          %img{src: space.image_url}
           %td= space.name
           %td= space.description
           %td= space.comments
+          %img{src: space.image_url.to_s}
           %td= link_to "Edit Space", edit_space_path(space)
           %td= link_to "Delete Space", space_path(space), data: { confirm: "Are you sure?" }, method: :delete
 .booyah-box.col-xs-10.col-xs-offset-1
