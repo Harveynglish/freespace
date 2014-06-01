@@ -1,6 +1,6 @@
 == [freespace]ATX
 
-=What is [freespace]?
+===What is [freespace]?
 
 The [freespace] movement is an experiment in what is possible when a community shares the gift of physical space.
 
