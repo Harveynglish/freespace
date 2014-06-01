@@ -3,8 +3,8 @@ class UsersController < ApplicationController
 
   def show
     @user = current_user
-    @spaces = Space.all
-    @activities = Activity.all
+    @spaces = @user.spaces.all
+    @activities = @user.activities.all
   end
 
 end
