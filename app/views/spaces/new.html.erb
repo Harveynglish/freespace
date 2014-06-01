@@ -3,7 +3,7 @@
   <div class="row">
     <div class="col-md-12">
 
-      <%= form_for @space, url: {action: "create"}do |f| %>
+      <%= form_for @space, url: {action: "create"} do |f| %>
 
         <h2 class="form-ihaveaspace-heading">Tell us about your space</h2>
         <%= f.text_field :name, autofocus: true, placeholder: "Name of Space*", :class => 'form-control' %>
