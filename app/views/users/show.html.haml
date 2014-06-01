@@ -1,0 +1,10 @@
+%h3= @spaces.name
+%br/
+.pull-right
+  = link_to 'Edit', edit_space_path(@spaces), :class => 'btn btn-primary'
+  = link_to 'Destroy', space_path(@spaces), :method => :delete, :data => {:confirm => 'Are you sure you want to delete this?'},:class => 'btn btn-danger'
+%h3= @activities.name
+%br/
+.pull-right
+  = link_to 'Edit', edit_activity_path(@activities), :class => 'btn btn-primary'
+  = link_to 'Destroy', activity_path(@activities), :method => :delete, :data => {:confirm => 'Are you sure you want to delete this?'},:class => 'btn btn-danger'
