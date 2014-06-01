@@ -1,18 +1,27 @@
-<h1>Add Space</h1>
+<!--begin form-->
+<div class="container content-wrap">
+  <div class="row">
+    <div class="col-md-12">
 
-<%= form_for(@space, url: {action: "create"} ) do |f| %>
+      <%= form_for(@space, url: {action: "create"} ) do |f| %>
 
-  <div><%= f.label :name %><br />
-  <%= f.text_field :name, autofocus: true %></div>
+        <h2 class="form-ihaveaspace-heading">Tell us about your space</h2>
+        <%= f.text_field :name, autofocus: true, placeholder: "Name of Space*", :class => 'form-control' %>
+        <%= f.text_field :name, placeholder: "Name of Space*", :class => 'form-control' %>
+        <%= f.text_field :address1, placeholder: "Address1*", :class => 'form-control' %>
+        <%= f.text_field :address2, placeholder: "Address2", :class => 'form-control' %>
+        <%= f.text_field :city, placeholder: "City", :class => 'form-control' %>
+        <div class="label">State</div>
+        <%= f.select :state, [["Alaska", "AK"], ["Alabama", "AL"], ["Arkansas", "AR"], ["American Samoa", "AS"], ["Arizona", "AZ"], ["California", "CA"], ["Colorado", "CO"], ["Connecticut", "CT"], ["District of Columbia", "DC"], ["Delaware", "DE"], ["Florida", "FL"], ["Georgia", "GA"], ["Guam", "GU"], ["Hawaii", "HI"], ["Iowa", "IA"], ["Idaho", "ID"], ["Illinois", "IL"], ["Indiana", "IN"], ["Kansas", "KS"], ["Kentucky", "KY"], ["Louisiana", "LA"], ["Massachusetts", "MA"], ["Maryland", "MD"], ["Maine", "ME"], ["Michigan", "MI"], ["Minnesota", "MN"], ["Missouri", "MO"], ["Mississippi", "MS"], ["Montana", "MT"], ["North Carolina", "NC"], ["North Dakota", "ND"], ["Nebraska", "NE"], ["New Hampshire", "NH"], ["New Jersey", "NJ"], ["New Mexico", "NM"], ["Nevada", "NV"], ["New York", "NY"], ["Ohio", "OH"], ["Oklahoma", "OK"], ["Oregon", "OR"], ["Pennsylvania", "PA"], ["Puerto Rico", "PR"], ["Rhode Island", "RI"], ["South Carolina", "SC"], ["South Dakota", "SD"], ["Tennessee", "TN"], ["Texas", "TX"], ["Utah", "UT"], ["Virginia", "VA"], ["Virgin Islands", "VI"], ["Vermont", "VT"], ["Washington", "WA"], ["Wisconsin", "WI"], ["West Virginia", "WV"], ["Wyoming", "WY"]], :class => 'form-control' %>
 
-  <div><%= f.label :description %><br />
-  <%= f.text_area :description, autofocus: true %></div>
+        <%= f.text_field :zip, placeholder: "Zip*", :class => 'form-control' %>
+        <%= f.text_area :description, placeholder: "Description", :class => 'form-control', :cols => "40", :rows => "5" %>
 
-  <div><%= f.label :capacity_id %><br />
-  <%= f.text_field :capacity_id, autofocus: true %></div>
+        <%= f.text_field :capacity, placeholder: "Capacity", :class => 'form-control' %>
 
-  <div><%= f.label :comments %><br />
-    <%= f.text_field :comments, autocomplete: "off" %></div>
 
-  <div><%= f.submit "Sign up" %></div>
-<% end %>
+        <%= f.submit "Submit", :class => "btn btn-lg btn-primary btn-block" %>
+      <% end %>
+    </div>
+  </div>
+</div> <!-- /container -->
