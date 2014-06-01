@@ -89,3 +89,10 @@ footer p {
 .form-ineedaspace select {
   margin-bottom: 10px;
 }
+/*dashboard*/
+.col-md-offset-2 {
+  margin-left: 0;
+}
+.col-sm-offset-3 {
+  margin-left: 0!important;
+}
