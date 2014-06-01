@@ -13,7 +13,7 @@ class CreateSpaces < ActiveRecord::Migration
       t.text        :comments
       t.float       :latitude
       t.float       :longitude
-      t.boolean     :always_available
+      t.boolean     :available_all_hours
       t.boolean     :alternate_contact
       t.string      :contact_name
       t.string      :contact_organization
