@@ -2,31 +2,47 @@
 <div class="container content-wrap">
   <div class="row">
     <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-12"><h1>I need a space</h1></div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <p>Looking for a [ freespace ] to transform into a community-driven hotbed of creativity where people can come to share and pursue their passions?</p>
+          <p>With a [ freespace ], you can host a wide array of events and projects, including but not limited to classes, music, art, yoga, silent discos, free bikeshare, community engagement and field trips, and more than a few silly costumes.</p>
+          <p>The power and success of [ freespace ] is a direct result of the energy freely contributed by a diverse range of everyday citizens - everything that happens here is created by someone like you.</p>
+        </div>
 
+        <div class="col-md-6">
+          <%= form_for(@activity, url: {action: "create"}, :html => {:class => "form-ineedaspace"}) do |f| %>
+            <h2 class="form-ineedaspace-heading">What are you looking for?</h2>
+            
+            <%= f.check_box :alternate_contact, placeholder: "Alternate Contact", value: "Alternate Contact?", :class => "form-control", :onclick => "toggle_alt_contact_visibility();" %>
+            <label>Alternate Contact?</label>
+            
 
-      <%= form_for(@activity, url: {action: "create"}, :html => {:class => "form-ineedaspace"}) do |f| %>
+            <%= f.text_field :contact_name, :id=>"AltContactName", :class => "form-control", placeholder: "Contact Name*", :style => "display:none;" %>
+            <%= f.text_field :contact_organization, :id=>"AltContactOrganization", :class => 'form-control', placeholder: "Contact's Organization", :style=>"display:none;" %>
+            <%= f.text_field :contact_phone, :id=>"AltContactPhone", :class => "form-control", placeholder: "Contact Phone", :style => "display:none;" %>
+            <%= f.text_field :contact_email, :id=>"AltContactEmail", :class => "form-control", placeholder: "Contact Email", :style => "display:none;" %>
+            
 
+            <%= f.text_field :name, :id=>"spacename", :class => "form-control", placeholder: "Name of Space*", required: true %>
+            <%= f.text_area :description, placeholder: "Describe event", :class => "form-control", :cols => "40", :rows => "10" %>
+            <%= f.text_field :capacity, placeholder: "Capacity", :class => "form-control" %>
+            <%= f.check_box :volunteers_needed, placeholder: "Do have Volunteers?", :class => "form-control" %>
 
-        <h2 class="form-ineedaspace-heading">What are you looking for?</h2>
+            <div class="col-md-12">
+              <p>Project hours are broken down in to shifts throughout the week. Consider how many days you would like your project to be open, and how many people it will take to fill the time slots.</p>
+            </div>
 
-        <%= f.text_field :name, :id=>"spacename", :class => 'form-control', placeholder: "Name of Space*", required: true, autofocus: true %>
-        <!--%= f.text_field :organization, placeholder: "Organization", :class => 'form-control' %-->
-        <!--%= f.text_field :organization, placeholder: "Phone Number", :class => 'form-control' %-->
-        <!--%= f.text_field :email, placeholder: "Email*", :class => 'form-control' %-->
-        <%= f.text_area :description, placeholder: "Describe event", :class => 'form-control', :cols => "40", :rows => "10" %>
-        <%= f.text_field :capacity, placeholder: "Capacity", :class => 'form-control' %>
-        <%= f.text_field :capacity, placeholder: "When do you want to have the event", :class => 'form-control' %>
-        <!--%= f.check_box :volunteer, placeholder: "Has Volunteer?", :class => 'form-control' %-->
+            <% #f.text_field :when, placeholder: "When do you want to have the event", :class => 'form-control' %>
 
+            <%= f.text_area :admin_notes, placeholder: "Admin Notes", :class => "form-control", :cols => "40", :rows => "10" %>
 
-
-
-
-
-
-
-        <%= f.submit "Submit", :class => "btn btn-lg btn-primary btn-block" %>
-      <% end %>
+            <%= f.submit "Submit", :class => "btn btn-lg btn-primary btn-block" %>
+          <% end %>
+        </div>
     </div>
   </div>
+</div>
 </div> <!-- /container -->
