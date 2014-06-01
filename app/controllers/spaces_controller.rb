@@ -6,6 +6,8 @@ class SpacesController < ApplicationController
 
   def create
     @space = Space.create(space_params)
+
+    redirect_to "/"
   end
 
   def show
@@ -22,7 +24,7 @@ class SpacesController < ApplicationController
 
   private
   def space_params
-    params.require(:space).permit(:name, :description, :capactity, :comments)
+    params.require(:space).permit(:name, :address1, :address2, :city, :state, :zip, :description, :capactity)
   end
 
 end
