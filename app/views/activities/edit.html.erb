@@ -5,7 +5,7 @@
 
       <%= form_for(@activity, url: {action: "update"}, :html => {:class => "form-ineedaspace"}) do |f| %>
 
-        <h2 class="form-ineedaspace-heading">What are you looking for?</h2>
+        <h2 class="form-ineedaspace-heading">Edit your activity</h2>
 
         <%= f.text_field :name, :id=>"spacename", :class => 'form-control', placeholder: @activity.name, required: true, autofocus: true %>
         <!--%= f.text_field :organization, placeholder: "Organization", :class => 'form-control' %-->
@@ -17,7 +17,16 @@
         <%= f.text_field :capacity, placeholder: @activity.capacity, :class => 'form-control' %>
         <%= f.label "When do you want this activity to take place?" %>
         <%= f.text_field :when, placeholder: @activity.when, :class => 'form-control' %>
-        <!--%= f.check_box :volunteer, placeholder: "Has Volunteer?", :class => 'form-control' %-->
+        <%= f.label "Has volunteers?" %>
+        <%= f.check_box :volunteers_needed, placeholder: @activity.volunteers_needed, :class => 'form-control' %>
+        <%= f.label "Comments" %>
+        <%= f.text_field :comments, placeholder: @activity.comments, :class => 'form-control' %>
+        <%= f.label "Alternate Contact?" %>
+        <%= f.check_box :alternate_contact, placeholder: @activity.alternate_contact, :class => 'form-control' %>
+        <% if current_user.is_admin? %>
+        <%= f.label "Admin Notes" %>
+        <%= f.text_field :admin_notes, placeholder: @activity.admin_notes, :class => 'form-control' %>
+        <% end %>
         <%= f.submit "Submit", :class => "btn btn-lg btn-primary btn-block" %>
       <% end %>
     </div>

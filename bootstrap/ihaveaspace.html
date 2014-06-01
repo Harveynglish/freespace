@@ -1,157 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap 101 Template</title>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap 101 Template</title>
 
-    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway:400,700|Roboto+Slab:400,700|Roboto+Condensed:400italic,400,700' rel='stylesheet' type='text/css'>
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway:400,700|Roboto+Slab:400,700|Roboto+Condensed:400italic,400,700' rel='stylesheet' type='text/css'>
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/custom.css" rel="stylesheet">
+  <link href="css/datepicker.css" rel="stylesheet">
+  <link href="css/slider.css" rel="stylesheet">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
+      <![endif]-->
+    </head>
+    <body>
 
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="index.html">[Freespace]ATX</a>
-        </div>
-        <div class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right" role="form">
-            <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
-            </div>
-            <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
-          </form>
-        </div><!--/.navbar-collapse -->
-      </div>
-    </div>
-
-    <!--begin form-->
-    <div class="container content-wrap">
-      <div class="row">
-        <div class="col-md-12">
-
-          <form class="form-ihaveaspace" role="form">
-            <h2 class="form-ihaveaspace-heading">Tell us about your space</h2>
-            <input type="text" name="spacename" class="form-control" placeholder="Name of Space*" required autofocus>
-            <input type="text" name="address1" class="form-control" placeholder="Address 1*" required>
-            <input type="text" name="address2" class="form-control" placeholder="Address 2">
-            <input type="text" name="city" class="form-control" placeholder="City">
-            <div class="label">State</div>
-            <select>
-              <option value="AL">Alabama</option>
-              <option value="AK">Alaska</option>
-              <option value="AZ">Arizona</option>
-              <option value="AR">Arkansas</option>
-              <option value="CA">California</option>
-              <option value="CO">Colorado</option>
-              <option value="CT">Connecticut</option>
-              <option value="DE">Delaware</option>
-              <option value="DC">District Of Columbia</option>
-              <option value="FL">Florida</option>
-              <option value="GA">Georgia</option>
-              <option value="HI">Hawaii</option>
-              <option value="ID">Idaho</option>
-              <option value="IL">Illinois</option>
-              <option value="IN">Indiana</option>
-              <option value="IA">Iowa</option>
-              <option value="KS">Kansas</option>
-              <option value="KY">Kentucky</option>
-              <option value="LA">Louisiana</option>
-              <option value="ME">Maine</option>
-              <option value="MD">Maryland</option>
-              <option value="MA">Massachusetts</option>
-              <option value="MI">Michigan</option>
-              <option value="MN">Minnesota</option>
-              <option value="MS">Mississippi</option>
-              <option value="MO">Missouri</option>
-              <option value="MT">Montana</option>
-              <option value="NE">Nebraska</option>
-              <option value="NV">Nevada</option>
-              <option value="NH">New Hampshire</option>
-              <option value="NJ">New Jersey</option>
-              <option value="NM">New Mexico</option>
-              <option value="NY">New York</option>
-              <option value="NC">North Carolina</option>
-              <option value="ND">North Dakota</option>
-              <option value="OH">Ohio</option>
-              <option value="OK">Oklahoma</option>
-              <option value="OR">Oregon</option>
-              <option value="PA">Pennsylvania</option>
-              <option value="RI">Rhode Island</option>
-              <option value="SC">South Carolina</option>
-              <option value="SD">South Dakota</option>
-              <option value="TN">Tennessee</option>
-              <option value="TX">Texas</option>
-              <option value="UT">Utah</option>
-              <option value="VT">Vermont</option>
-              <option value="VA">Virginia</option>
-              <option value="WA">Washington</option>
-              <option value="WV">West Virginia</option>
-              <option value="WI">Wisconsin</option>
-              <option value="WY">Wyoming</option>
-            </select>
-            <input type="text" name="zip" class="form-control" placeholder="Zip">
-            <img src="http://placehold.it/400x400" alt="map">
-            <input type="hidden" name="latitude" class="form-control" placeholder="Latitude">
-            <input type="hidden" name="longitude" class="form-control" placeholder="Longitude">
-            <textarea name="description" class="form-control" placeholder="Description" cols="40" rows="5" ... ></textarea>
-            <!-- <input type="text" name="description" class="form-control" placeholder="Description"> -->
-            <div class="label">Capacity</div>
-            <select>
-              <option value="0-10">0-10</option>
-              <option value="11-50">11-50</option>
-              <option value="51-100">51-100</option>
-              <option value="100-200">100-200</option>
-              <option value="200-500">200-500</option>
-              <option value="500+">500+</option>
-            </select>
-
-            <label class="checkbox">
-              <input type="checkbox" name="Monday" value="">Monday<br>
-              <input type="checkbox" name="Tuesday" value="">Tuesday<br>
-              <input type="checkbox" name="Wednesday" value="">Wednesday<br>
-              <input type="checkbox" name="Thursday" value="">Thursday<br>
-              <input type="checkbox" name="Friday" value="">Friday<br>
-              <input type="checkbox" name="Saturday" value="">Saturday<br>
-              <input type="checkbox" name="Sunday" value="">Sunday<br>
-            </label>
-
-             <label class="checkbox">
-              <input type="checkbox" name="Mornings" value="">Mornings<br>
-              <input type="checkbox" name="Afternoons" value="">Afternoons<br>
-              <input type="checkbox" name="Evenings" value="">Evenings<br>
-              <input type="checkbox" name="Night" value="">Night<br>
-            </label>
-
-            <div class="label">Upload an image</div>
-            <input type="file" name="img" class="form-control">
-
-            <input type="submit" name="submit" class="btn btn-lg btn-primary btn-block" value"Submit"/>
-          </form>
+      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">[ freespace ]ATX</a>
+          </div>
+          <div class="navbar-collapse collapse">
+            <form class="navbar-form navbar-right" role="form">
+              <div class="form-group">
+                <input type="text" placeholder="Email" class="form-control">
+              </div>
+              <div class="form-group">
+                <input type="password" placeholder="Password" class="form-control">
+              </div>
+              <button type="submit" class="btn btn-success">Sign in</button>
+            </form>
+          </div><!--/.navbar-collapse -->
         </div>
       </div>
-    </div> <!-- /container -->
 
-    <div class="footer-wrap">
+      <!--begin form-->
+      <div class="container content-wrap formpage ihaveaspace">
+        <div class="row">
+          <div class="col-md-6">
+            <h1>STEP 1: What are you looking for?</h1>
+            <div class="indicator-wrap">
+              <ul>
+                <li class="indicator active">&#8226;</li>
+                <li class="indicator inactive">&#8226;</li>
+                <li class="indicator inactive">&#8226;</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6"></div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <form class="form-ihaveaspace" role="form">
+              <input type="text" name="spacename" class="form-control" placeholder="Name of Space*" required autofocus>
+              <input type="text" name="contactname" class="form-control" placeholder="Contact Name" autofocus>
+              <input type="text" name="contactphone" class="form-control" placeholder="Contact Phone Number" autofocus>
+              <input type="email" name="contactemail" class="form-control" placeholder="Contact Email" autofocus>
+              <input type="text" name="address1" class="form-control" placeholder="Address 1*" required>
+              <input type="text" name="address2" class="form-control" placeholder="Address 2">
+              <input type="text" name="city" class="form-control" placeholder="City">
+              <div class="label">State</div>
+              <select>
+                <option value="AL">Alabama</option>
+                <option value="AK">Alaska</option>
+                <option value="AZ">Arizona</option>
+                <option value="AR">Arkansas</option>
+                <option value="CA">California</option>
+                <option value="CO">Colorado</option>
+                <option value="CT">Connecticut</option>
+                <option value="DE">Delaware</option>
+                <option value="DC">District Of Columbia</option>
+                <option value="FL">Florida</option>
+                <option value="GA">Georgia</option>
+                <option value="HI">Hawaii</option>
+                <option value="ID">Idaho</option>
+                <option value="IL">Illinois</option>
+                <option value="IN">Indiana</option>
+                <option value="IA">Iowa</option>
+                <option value="KS">Kansas</option>
+                <option value="KY">Kentucky</option>
+                <option value="LA">Louisiana</option>
+                <option value="ME">Maine</option>
+                <option value="MD">Maryland</option>
+                <option value="MA">Massachusetts</option>
+                <option value="MI">Michigan</option>
+                <option value="MN">Minnesota</option>
+                <option value="MS">Mississippi</option>
+                <option value="MO">Missouri</option>
+                <option value="MT">Montana</option>
+                <option value="NE">Nebraska</option>
+                <option value="NV">Nevada</option>
+                <option value="NH">New Hampshire</option>
+                <option value="NJ">New Jersey</option>
+                <option value="NM">New Mexico</option>
+                <option value="NY">New York</option>
+                <option value="NC">North Carolina</option>
+                <option value="ND">North Dakota</option>
+                <option value="OH">Ohio</option>
+                <option value="OK">Oklahoma</option>
+                <option value="OR">Oregon</option>
+                <option value="PA">Pennsylvania</option>
+                <option value="RI">Rhode Island</option>
+                <option value="SC">South Carolina</option>
+                <option value="SD">South Dakota</option>
+                <option value="TN">Tennessee</option>
+                <option value="TX">Texas</option>
+                <option value="UT">Utah</option>
+                <option value="VT">Vermont</option>
+                <option value="VA">Virginia</option>
+                <option value="WA">Washington</option>
+                <option value="WV">West Virginia</option>
+                <option value="WI">Wisconsin</option>
+                <option value="WY">Wyoming</option>
+              </select>
+              <input type="text" name="zip" class="form-control" placeholder="Zip">
+              <!-- <img src="http://placehold.it/400x400" alt="map"> -->
+              <input type="hidden" name="latitude" class="form-control" placeholder="Latitude">
+              <input type="hidden" name="longitude" class="form-control" placeholder="Longitude">
+              <textarea name="description" class="form-control" placeholder="Description" cols="40" rows="5" ... ></textarea>
+              <!-- <input type="text" name="description" class="form-control" placeholder="Description"> -->
+              <div class="label">Capacity</div>
+              <select>
+                <option value="0-10">0-20</option>
+                <option value="11-50">21-50</option>
+                <option value="51-100">51-100</option>
+                <option value="100-200">100-200</option>
+                <option value="200-500">200-500</option>
+                <option value="500+">500+</option>
+              </select>
+
+              <span class="row">
+                <span class="col col-md-4" id="daysoftheweek">
+                  <label class="checkbox">
+                    <input type="checkbox" name="Monday" value="" id="monchecked" class="enabler">Monday<br>
+                    <input type="checkbox" name="Tuesday" value="" id="tueschecked" class="enabler">Tuesday<br>
+                    <input type="checkbox" name="Wednesday" value="" id="wedchecked" class="enabler">Wednesday<br>
+                    <input type="checkbox" name="Thursday" value="" id="thurschecked" class="enabler">Thursday<br>
+                    <input type="checkbox" name="Friday" value="" id="frichecked" class="enabler">Friday<br>
+                    <input type="checkbox" name="Saturday" value="" id="satchecked" class="enabler">Saturday<br>
+                    <input type="checkbox" name="Sunday" value="" id="sunchecked" class="enabler">Sunday<br>
+                  </label> 
+                </span>
+
+                <span class="col col-md-8 slider-wrap">
+
+                  <span class="row mon-wrap">
+                    <input type="text" class="form-control" name="monstart" id="monstartform">
+                    <span id="monstarthuman"></span> <b>am</b> 
+                    <input id="mon" type="text" class="slider" value="" data-slider-min="0" data-slider-max="24" data-slider-step=".5" data-slider-value="[9,17]" data-slider-enabled="false"/>
+                    <input type="text" class="form-control" name="monend"  id="monendform">
+                    <span id="monendhuman"></span><b>pm</b>
+                    <span id="monsliderval"></span>
+                  </span><!--end row-->
+
+                  <span class="row tues-wrap">
+                    <input type="text" class="form-control" name="tuesstart" id="tuesstartform">
+                    <span id="tuesstarthuman"></span> <b>am</b> 
+                    <input id="tues" type="text" class="slider" value="" data-slider-min="0" data-slider-max="24" data-slider-step=".5" data-slider-value="[9,17]" data-slider-enabled="false"/> 
+                    <input type="text" class="form-control" name="tuesend"  id="tuesendform">
+                    <span id="tuesendhuman"></span><b>pm</b>
+                    <span id="tuessliderval"></span>
+                  </span><!--end row-->
+
+                  <span class="row wed-wrap">
+                    <input type="text" class="form-control" name="wedstart" id="wedstartform">
+                    <span id="wedstarthuman"></span> <b>am</b> 
+                    <input id="wed" type="text" class="slider" value="" data-slider-min="0" data-slider-max="24" data-slider-step=".5" data-slider-value="[9,17]" data-slider-enabled="false"/> 
+                    <input type="text" class="form-control" name="wedend"  id="wedendform">
+                    <span id="wedendhuman"></span><b>pm</b>
+                    <span id="wedsliderval"></span>
+                  </span><!--end row-->
+
+                  <span class="row thurs-wrap">
+                    <input type="text" class="form-control" name="thursstart" id="thursstartform">
+                    <span id="thursstarthuman"></span> <b>am</b> 
+                    <input id="thurs" type="text" class="slider" value="" data-slider-min="0" data-slider-max="24" data-slider-step=".5" data-slider-value="[9,17]" data-slider-enabled="false"/> 
+                    <input type="text" class="form-control" name="thursend"  id="thursendform">
+                    <span id="thursendhuman"></span><b>pm</b>
+                    <span id="thurssliderval"></span>
+                  </span><!--end row-->
+
+                  <span class="row fri-wrap">
+                    <input type="text" class="form-control" name="fristart" id="fristartform">
+                    <span id="fristarthuman"></span> <b>am</b> 
+                    <input id="fri" type="text" class="slider" value="" data-slider-min="0" data-slider-max="24" data-slider-step=".5" data-slider-value="[9,17]" data-slider-enabled="false"/> 
+                    <input type="text" class="form-control" name="friend"  id="friendform">
+                    <span id="friendhuman"></span><b>pm</b>
+                    <span id="frisliderval"></span>
+                  </span><!--end row-->
+
+                  <span class="row sat-wrap">
+                    <input type="text" class="form-control" name="satstart" id="satstartform">
+                    <span id="satstarthuman"></span> <b>am</b> 
+                    <input id="sat" type="text" class="slider" value="" data-slider-min="0" data-slider-max="24" data-slider-step=".5" data-slider-value="[9,17]" data-slider-enabled="false"/> 
+                    <input type="text" class="form-control" name="satend"  id="satendform">
+                    <span id="satendhuman"></span><b>pm</b>
+                    <span id="satsliderval"></span>
+                  </span><!--end row-->
+
+                  <span class="row sun-wrap">
+                    <input type="text" class="form-control" name="sunstart" id="sunstartform">
+                    <span id="sunstarthuman"></span> <b>am</b> 
+                    <input id="sun" type="text" class="slider" value="" data-slider-min="0" data-slider-max="24" data-slider-step=".5" data-slider-value="[9,17]" data-slider-enabled="false"/> 
+                    <input type="text" class="form-control" name="sunend"  id="sunendform">
+                    <span id="sunendhuman"></span><b>pm</b>
+                    <span id="sunsliderval"></span>
+                  </span><!--end row-->
+                </span><!--end col-->
+
+              </span><!--end row-->
+
+              <hr>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="label">From</div>
+                  <div class="input-append date" id="date1" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+                    <input class="span2" size="16" type="text" value="12-02-2012" readonly>
+                    <span class="add-on"><span class="glyphicon glyphicon-calendar"></span></span>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="label">To</div>
+                  <div class="input-append date" id="date2" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+                    <input class="span2" size="16" type="text" value="12-02-2012" readonly>
+                    <span class="add-on"><span class="glyphicon glyphicon-calendar"></span></span>
+                  </div>
+                </div>
+              </div>
+
+              <hr>
+
+              <div class="label">Upload an image</div>
+              <input type="file" name="img" class="form-control">
+
+              <input type="submit" name="submit" class="btn btn-lg btn-primary btn-block" value"Submit"/>
+            </form>
+          </div><!--end col-->
+          <div class="col-md-6 copy">
+            <p>Looking for a [ freespace ] to transform into a community-driven hotbed of creativity where people can come to share and pursue their passions?</p>
+            <p>With a [ freespace ], you can host a wide array of events and projects, including but not limited to classes, music, art, yoga, silent discos, free bikeshare, community engagement and field trips, and more than a few silly costumes.</p>
+            <p>The power and success of [ freespace ] is a direct result of the energy freely contributed by a diverse range of everyday citizens - everything that happens here is created by someone like you.</p>
+          </div><!--end col-->
+        </div>
+      </div> <!-- /container -->
+
+      <div class="footer-wrap">
         <div class="container footer">
           <!-- Example row of columns -->
           <div class="row footer">
@@ -159,9 +266,9 @@
               <h2>Subscribe</h2>
               <form>
                 <input type="text" class="" name="emailaddress" value="" placeholder="Email Address" />
-                  <input type="submit" name="Submit" class="btn btn-default" value="Subscribe" />
+                <input type="submit" name="Submit" class="btn btn-default" value="Subscribe" />
               </form>
-           </div>
+            </div>
             <div class="col-md-4">
               <h2>Quick Links</h2>
               <ul>
@@ -171,7 +278,7 @@
                 <li><a href="#">Link 4</a></li>
               </ul>
             </div>
-            
+
             <div class="col-md-4">
               <h2>Contact</h2>
               <p>123 Main Street</p>
@@ -186,10 +293,115 @@
         </div> <!-- /container -->
       </div><!--end footer-wrap-->
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-  </body>
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="js/bootstrap.min.js"></script>
+
+      <!--initiate datepicker-->
+      <script src="js/bootstrap-datepicker.js"></script>
+
+      <script>
+      $('#date1').datepicker();
+      $('#date2').datepicker();
+      </script>
+      <!--initiate slider-->
+      <script src="js/datescript.js"></script>
+      <script src="js/bootstrap-slider.js"></script>
+
+      <script type="text/javascript">
+      $(".slider").slider();
+
+      $(".enabler").click(function() {
+        var varID = event.target.id;
+        var parsedID = varID.replace('checked', '');
+        if(this.checked) {
+          $("#"+parsedID).slider("enable");
+        }
+        else {
+          $("#"+parsedID).slider("disable");
+        }
+      });
+
+      $("#mon").on('slide slideStop', function(slideEvt) {
+        var slideVal = slideEvt.value;
+        var database_format = database_format(slideVal);
+        var human_format = human_format(database_format);
+      // var slideStr = slideVal.toString();
+      // $("#monsliderval").text(slideVal);
+      // var monStart= slideStr.substr(0, slideStr.indexOf(',')); 
+      // var monEnd=slideStr.substring(slideStr.indexOf(',') +1);
+      function database_format(string)
+      {
+        alert("called");
+        split = string.split(",");
+        return split;
+      }
+      //this fuction takes an array of 2 numbers, the number should be from 0 to 24 with .5 as the only acceptable floating value
+      //this fuction can take output from database_format()
+      function human_format(value)
+      {
+        var correct_format = new Array();
+        var i = 0;
+        var pm = false;
+        while(i < value.length)
+        {
+          var value_num = parseFloat(value[i]);
+          if(value_num > 12)
+          {
+            if(value_num != 24)
+              pm = true;
+            value_num = value_num - 12;
+          }
+          else if(value_num == 12)
+            pm = true;
+          if(value_num == 0)
+            value_num = 12;
+          else if(value_num == 0.5)
+            value_num = 12.5;
+          var string_num = value_num.toString();
+          var split = string_num.split('.');
+          if(split.length == 1)
+            correct_format[i] = split[0] + ":" + "00";
+          else if(split.length > 1)
+            correct_format[i] = split[0] + ":" + "30";
+
+          if(pm == true)
+            correct_format[i] += "pm";
+          else
+            correct_format[i] += "am";
+          i++;
+        }
+
+        return correct_format;
+      }
+      $("#monstarthuman").text(human_format[0]);
+      $("#monendhuman").text(human_format[1]);
+      $("#monstartform").text(database_format[0]);
+      $("#monendform").text(database_format[1]);
+    });
+$("#tues").on('slide slideStop', function(slideEvt) {
+  $("#tuessliderval").text(slideEvt.value);
+});
+$("#wed").on('slide slideStop', function(slideEvt) {
+  $("#wedsliderval").text(slideEvt.value);
+});
+$("#thurs").on('slide slideStop', function(slideEvt) {
+  $("#thurssliderval").text(slideEvt.value);
+});
+$("#fri").on('slide slideStop', function(slideEvt) {
+  $("#frisliderval").text(slideEvt.value);
+});
+$("#sat").on('slide slideStop', function(slideEvt) {
+  $("#satsliderval").text(slideEvt.value);
+});
+$("#sun").on('slide slideStop', function(slideEvt) {
+  $("#sunsliderval").text(slideEvt.value);
+});
+
+
+</script>
+
+</body>
 </html>
