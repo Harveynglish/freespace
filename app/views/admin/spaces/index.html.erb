@@ -7,16 +7,30 @@
     <table class="table">
       <td>Name</td>
       <td>Description</td>
+      <td>Address Info</td>
+      <td>Capacity</td>
+      <td>Always Avail?</td>
       <td>Comments</td>
+      <td>Admin Notes</td>
       <td>User</td>
+      <td>Edit</td>
+      <td>Delete</td>
+      <td>Alternate Contact</td>
       <% @spaces.each do |space| %>
       <tr>
         <td><%= space.name %></td>
         <td><%= space.description %></td>
+        <td><%= space.address1 %><br /><%= space.address2 %><br /><%= space.city %>, <%= space.state %> <%= space.zip %></td>
+        <td><%= space.capacity %>
+        <td><%= space.available_all_hours ? "X" : "" %></td>
         <td><%= space.comments %></td>
+        <td><%= space.admin_notes %></td>
         <td><%= link_to space.user.name, admin_user_path(space.user) %></td>
         <td><%= link_to "Edit Space", edit_space_path(space) %></td>
         <td><%= link_to "Delete Space", space_path(space), data: { confirm: "Are you sure?" }, method: :delete %></td>
+        <% if space.alternate_contact? %>
+        <td>space.contact_name, space.contact_organization, space.contact_phone, space.contact_email</td>
+        <% end %>
       </tr>
       <% end %>
     </table>
