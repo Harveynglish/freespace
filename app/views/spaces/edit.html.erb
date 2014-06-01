@@ -37,16 +37,16 @@
         <%= f.label "Capacity" %>
         <%= f.text_field :capacity, placeholder: @space.capacity, :class => 'form-control' %>
 
-        <%= f.label "Available all hours?" %>
-        <%= f.check_box :available_all_hours %><br />
+        <% # f.label "Available all hours?" %>
+        <% # f.check_box :available_all_hours %><br />
 
-        <%= f.label "Alternate Contact?" %>
-        <%= f.check_box :alternate_contact %>
+        <% # f.label "Alternate Contact?" %>
+        <% # f.check_box :alternate_contact %>
 
-        <% if current_user.is_admin? %>
-        <%= f.label "Admin Notes" %>
-        <%= f.text_field :admin_notes, placeholder: @space.admin_notes, :class => 'form-control' %>
-        <% end %>
+        <% # if current_user.is_admin? %>
+        <% # f.label "Admin Notes" %>
+        <% # f.text_field :admin_notes, placeholder: @space.admin_notes, :class => 'form-control' %>
+        <% # end %>
 
         <%= f.submit "Submit", :class => "btn btn-lg btn-primary btn-block" %>
       <% end %>

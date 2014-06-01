@@ -26,10 +26,10 @@
         <%= f.text_field :zip, placeholder: @space.zip, :class => 'form-control' %>
 
         <!--%= f.text_field :zip, hidden: true, placeholder: "Latitude", :class => 'form-control', :hidden => true %-->
-        <%= hidden_field_tag(:Latitude, "") %>
+        <% # hidden_field_tag(:Latitude, "") %>
 
         <!--%= f.text_field :zip, hidden: true, placeholder: "Longitude", :class => 'form-control' %-->
-        <%= hidden_field_tag(:Latitude, "") %>
+        <% # hidden_field_tag(:Latitude, "") %>
 
         <%= f.label "Description" %>
         <%= f.text_area :description, placeholder: @space.description, :class => 'form-control', :cols => "40", :rows => "5" %>
@@ -37,11 +37,11 @@
         <%= f.label "Capacity" %>
         <%= f.text_field :capacity, placeholder: @space.capacity, :class => 'form-control' %>
 
-        <%= f.label "Available all hours?" %>
-        <%= f.check_box :available_all_hours %><br />
+        <% # f.label "Available all hours?" %>
+        <% # f.check_box :available_all_hours %><br />
 
-        <%= f.label "Alternate Contact?" %>
-        <%= f.check_box :alternate_contact %>
+        <% # f.label "Alternate Contact?" %>
+        <% # f.check_box :alternate_contact %>
 
         <%= f.submit "Submit", :class => "btn btn-lg btn-primary btn-block" %>
       <% end %>
