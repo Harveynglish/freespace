@@ -1,5 +1,12 @@
 class SpacesController < ApplicationController
-  before_action :authenticate_user!, :only => [:new, :create, :edit, :update, :destroy]
+  before_action :authenticate_user!
+  before_action :is_permitted, :except => [:new, :thankyou, :create]
+
+  def is_permitted
+    unless current_user.id == Space.find(params[:id]).user_id || current_user.is_admin?
+      redirect_to "/account" 
+    end
+  end
 
   def new
     @space = Space.new
