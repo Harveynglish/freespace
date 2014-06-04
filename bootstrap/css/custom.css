@@ -1,65 +1,221 @@
+/****************************
+**      BASE LAYOUT      **
+****************************/
 .navbar {
   margin-bottom: 0;
 }
-.social-widgets .row {
-  padding: 40px 0 0 0;
+.navbar-brand {
+  color: #fff;
+  font-family: "Montserrat";
+  font-size: 30px;
 }
-.social-widgets .row.content {
-  padding: 0 0 40px 0;
-  min-height: 550px;
+.footer .social-icons ul { 
+  margin: 0;
+  padding: 0;
 }
-.social-widgets .widget-wrap {
-  height: 400px;
-  width: 300px;
-  margin: 0 auto;
+.footer .social-icons li { 
+  list-style: none;
+  display: inline-block;
+  margin-left: 5px;
+  text-indent: -9999px;
 }
-.tagline .row {
-  padding: 40px 0;
+.footer .social-icons li.facebook { 
+  background-image: url('../images/template/facebook.png');
+  width: 17px;
+  height: 35px;
 }
-.tagline h4 {
+.footer .social-icons li.twitter { 
+  background-image: url('../images/template/twitter.png');
+  width: 44px;
+  height: 33px;
+}
+.footer .social-icons li.instagram { 
+  background-image: url('../images/template/instagram.png');
+  width: 38px;
+  height: 39px;
+}
+.footer .social-icons li.youtube { 
+  background-image: url('../images/template/youtube.png');
+  width: 40px;
+  height: 39px;
+}
+.footer .social-icons li.googleplus { 
+  background-image: url('../images/template/googleplus.png');
+  width: 25px;
+  height: 26px;
+}
+.footer .social-icons ul { 
+  margin: 0;
+  padding: 0;
+}
+/****************************
+**      HOMEPAGE     **
+****************************/
+.carousel-inner>.item>a>img, 
+.carousel-inner>.item>img {
+  height: auto;
+}
+.homepage .about {
+  margin-top: 40px;
+}
+.homepage .about h3 {
+  color: #f21700;
+  font-size: 30px;
+  font-weight: bold;
+}
+.homepage .about p {
+  color: #f21700;
+}
+
+.homepage .promo-banner-wrap {
+  background-color: #f21700;
+  color: #fff;
+}
+.homepage .promo-banner-wrap h3 {
+  color: #fff;
+  font-family: "Roboto Slab";
+  font-size: 30px;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.homepage .promo-banner-wrap p {
+  color: #fff;
+}
+.homepage .quote-wrap {
+  position: relative;
+  min-height: 234px;
+}
+.homepage .quote-wrap .bg-container img{
+  display: block;
+  min-width: 100%;
+  position: absolute;
+  left: 0;
+  top:0;
+}
+.homepage .quote {
+  padding-top: 40px;
+}
+.homepage .quote h4 {
+  color: #f21700;
+  font-family: "Montserrat";
+  font-size: 24px;
+  background:#fff;
+  padding: 5px;
+  display: inline;
+  line-height: 2;
+}
+.homepage .projectcontact .form-control {
+  border-radius:0;
+  margin-bottom: 10px;
+}
+.homepage .projectcontact p {
+  color: #f21700;
+  font-family: "Roboto Slab";
+  font-size: 32px;
   text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
-  font-size: 22px;
+  padding: 20px 40px;
 }
+/****************************
+**      FORM PAGES     **
+****************************/
+.formpage .indicator-wrap {
+
+}
+.formpage .indicator-wrap ul {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.formpage .indicator-wrap li {
+  list-style: inside; 
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  font-size: 24px;
+}
+.formpage .indicator-wrap li.active {
+    color: #f21700;
+} 
+.formpage .indicator-wrap li.inactive {
+    color: #999;
+} 
+.formpage label.checkbox {
+  
+}
+.formpage input[type=radio] {
+  margin: 0 5px 0 0;
+}
+/****************************
+**      IHAVEASPACE     **
+****************************/
+.formpage  h1{
+  color: #f21700;
+  font-family: "Roboto Slab";
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.formpage .copy p {
+  color: #f21700;
+  font-family: "Roboto Slab";
+  font-size: 24px;
+  text-align: left;
+  margin-bottom: 40px;
+  max-width: 340px;
+}
+.form-control {
+  border: 1px solid #f21700;
+  border-radius: 6px;
+}
+
 .promo-banner .row {
   padding: 40px 0;
 }
 .promo-banner img {
-  width: 300px;
-  margin-left: auto;
-  margin-right: auto;
+
 }
 .footer-wrap {
-  background-image: -webkit-linear-gradient(top, rgba(26, 26, 26, 0.8) 0%, rgba(0, 0, 0, 0.8) 100%);
-  background-image: -o-linear-gradient(top, rgba(26, 26, 26, 0.8) 0%, rgba(0, 0, 0, 0.8) 100%);
-  background-image: linear-gradient(to bottom, rgba(26, 26, 26, 0.8) 0%, rgba(0, 0, 0, 0.8) 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cc1a1a1a', endColorstr='#cc000000', GradientType=0);
+  background-color: #f31700;
+  color: #fff;
 }
 .footer-wrap .footer-wrap > .active > a {
-  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(6, 6, 6, 0.8) 100%);
-  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(6, 6, 6, 0.8) 100%);
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(6, 6, 6, 0.8) 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cc000000', endColorstr='#cc060606', GradientType=0);
-  -webkit-box-shadow: inset 0 3px 9px rgba(0, 0, 0, 0.25);
-  box-shadow: inset 0 3px 9px rgba(0, 0, 0, 0.25);
+  color: #fff;
 }
 .footer-wrap .footer-wrap,
 .footer-wrap .footer-wrap > li > a {
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, .25);
 }
-.footer {
+.footer, 
+.footer h1, 
+.footer h2, 
+.footer h3, 
+.footer h4, 
+.footer h5, 
+.footer h6,
+.footer a {
+  color: #fff;
+}
+.footer a:hover {
   color: #fff;
 }
 .footer .row {
   padding: 40px 0;
 }
+.footer ul {
+  margin: 0;
+  padding: 0;
+}
+.footer li {
+  list-style: none;
+}
 footer p {
   font-size: 10px;
 }
-/* form pages */
+/****************************
+**      FORMS     **
+****************************/
 .content-wrap {
   padding: 120px 0 40px 0;
 }
@@ -76,6 +232,28 @@ footer p {
 .form-ihaveaspace select {
   margin-bottom: 10px;
 }
+.form-ihaveaspace #daysoftheweek col {
+  margin-right: 0;
+}
+.form-ihaveaspace #daysoftheweek .checkbox {
+  line-height: 30px;
+  margin-top: 0;
+}
+.form-ihaveaspace .slider-wrap {
+  padding: 0;
+  margin: 0;
+}
+.form-ihaveaspace .slider-wrap .row {
+  padding: 0;
+  margin: 0;
+}
+.form-ihaveaspace .slider-wrap .form-control {
+  width: 40px;
+  display: inline-block;
+  padding: 5px;
+  margin: 0 0 5px 0;
+  height: 25px;
+}
 .form-ineedaspace {
   max-width: 430px;
   padding: 15px;
@@ -83,13 +261,56 @@ footer p {
 }
 .form-ineedaspace .label {
   color: #000;
+  text-align: left;
+  white-space: normal!important;
 }
 .form-ineedaspace .form-control,
 .form-ineedaspace img,
 .form-ineedaspace select {
   margin-bottom: 10px;
 }
-/*dashboard*/
+/****************************
+**      THANK YOU PAGES     **
+****************************/
+.thankyou-wrap {
+  position: relative;
+}
+.row.thankyou {
+  max-width: 700px;
+  margin: 17% auto;
+  text-align: left;
+}
+.thankyou-wrap {
+  position: relative;
+  min-height: 600px;
+  clear: both;
+  overflow: hidden;
+}
+.thankyou .bg-container img{
+  display: block;
+  min-width: 100%;
+  position: absolute;
+  left: 0;
+  top:0;
+}
+.thankyou h1 {
+  color: #f21700;
+  font-family: "Roboto Slab";
+  font-size: 40px;
+  font-weight: bold;
+  background:#fff;
+  padding: 5px;
+  display: inline;
+  line-height: 2;
+}
+.thankyou a.btn {
+}
+.col-wrap {
+  margin-bottom: 60px;
+}
+/****************************
+**      DASHBOARD     **
+****************************/
 .col-md-offset-2 {
   margin-left: 0;
 }

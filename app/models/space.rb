@@ -10,6 +10,8 @@ class Space < ActiveRecord::Base
   scope :available_for_single_day_time_of, -> event { where("(available_all_hours = true) OR (day_id = ? AND start_time <= ? AND end_time >= ?)", event.start_time.day, event.start_time_as_int, event.end_time_as_int) }
   scope :available_for_late_night_time_of, -> event { where("(available_all_hours = true) OR ((available_times.day_id = ? AND available_times.start_time <= ?) AND (available_times.day_id = ? AND available_times.start_time = 0 AND available_times.end_time >= ?))", event.start_time.day, event.start_time_as_int, event.start_time.day + 1, event.end_time_as_int) }
 
+  mount_uploader :image, ImageUploader
+
   def self.available_for(event)
     if event.late_night?
       self.late_night_availabilities_for(event)
