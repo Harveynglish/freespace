@@ -1,37 +1,145 @@
 <!--begin form-->
-<div class="container content-wrap">
+<div class="container content-wrap formpage ihaveaspace">
   <div class="row">
-    <div class="col-md-12">
-      
+    <div class="col-md-6">
+      <h1>STEP 1: Tell us about your space</h1>
+      <div class="indicator-wrap">
+        <ul>
+          <li class="indicator active">&#8226;</li>
+          <li class="indicator inactive">&#8226;</li>
+          <li class="indicator inactive">&#8226;</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-6"></div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
       <%= form_for(@space, url: {action: "create"}, :html => {:class => "form-ihaveaspace"}) do |f| %>
         
-        <h2 class="form-ihaveaspace-heading">Tell us about your space</h2>
-
         <%= f.text_field :name, :id=>"spacename", :class => 'form-control', placeholder: "Name of Space*", required: true, autofocus: true %>
         
+        <!--%= f.text_field :name, :id=>"ContactName", :class => 'form-control', placeholder: "Contact Name" %-->
+        <!--%= f.text_field :name, :id=>"ContactPhone", :class => 'form-control', placeholder: "Contact Phone Number" %-->
+        <!--%= f.text_field :name, :id=>"ContactEmail", :class => 'form-control', placeholder: "Contact Email" %-->
+        
         <%= f.text_field :address1, :id=>"address1", :class => 'form-control', placeholder: "Address1*", :required => true %>
-        
         <%= f.text_field :address2, placeholder: "Address2", :class => 'form-control' %>
-
         <%= f.text_field :city, placeholder: "City", :class => 'form-control' %>
-        
         <div class="label">State</div>
         <%= f.select :state, [["Alaska", "AK"], ["Alabama", "AL"], ["Arkansas", "AR"], ["American Samoa", "AS"], ["Arizona", "AZ"], ["California", "CA"], ["Colorado", "CO"], ["Connecticut", "CT"], ["District of Columbia", "DC"], ["Delaware", "DE"], ["Florida", "FL"], ["Georgia", "GA"], ["Guam", "GU"], ["Hawaii", "HI"], ["Iowa", "IA"], ["Idaho", "ID"], ["Illinois", "IL"], ["Indiana", "IN"], ["Kansas", "KS"], ["Kentucky", "KY"], ["Louisiana", "LA"], ["Massachusetts", "MA"], ["Maryland", "MD"], ["Maine", "ME"], ["Michigan", "MI"], ["Minnesota", "MN"], ["Missouri", "MO"], ["Mississippi", "MS"], ["Montana", "MT"], ["North Carolina", "NC"], ["North Dakota", "ND"], ["Nebraska", "NE"], ["New Hampshire", "NH"], ["New Jersey", "NJ"], ["New Mexico", "NM"], ["Nevada", "NV"], ["New York", "NY"], ["Ohio", "OH"], ["Oklahoma", "OK"], ["Oregon", "OR"], ["Pennsylvania", "PA"], ["Puerto Rico", "PR"], ["Rhode Island", "RI"], ["South Carolina", "SC"], ["South Dakota", "SD"], ["Tennessee", "TN"], ["Texas", "TX"], ["Utah", "UT"], ["Virginia", "VA"], ["Virgin Islands", "VI"], ["Vermont", "VT"], ["Washington", "WA"], ["Wisconsin", "WI"], ["West Virginia", "WV"], ["Wyoming", "WY"]], :class => 'form-control' %>
-
         <%= f.text_field :zip, placeholder: "Zip*", :class => 'form-control' %>
-        
+        <!--%= #placeholder for the image/map image size is 400x400 %-->
         <!--%= f.text_field :zip, hidden: true, placeholder: "Latitude", :class => 'form-control', :hidden => true %-->
         <%= hidden_field_tag(:Latitude, "") %>
-
         <!--%= f.text_field :zip, hidden: true, placeholder: "Longitude", :class => 'form-control' %-->
         <%= hidden_field_tag(:Latitude, "") %>
-
         <%= f.text_area :description, placeholder: "Description", :class => 'form-control', :cols => "40", :rows => "5" %>
-
         <%= f.text_field :capacity, placeholder: "Capacity", :class => 'form-control' %>
+        <span class="row">
+          <span class="col col-md-4" id="daysoftheweek">
+            <div class="label">Monday</div>
+            <!--%= f.check_box :alternate_contact, placeholder: "Monday", value: "Alternate Contact?", :class => "form-control", :onclick => "toggle_alt_contact_visibility();" %-->
+          </span>
+          <span class="col col-md-8 slider-wrap">
+            <!--start mon row-->
+            <span class="row mon-wrap">
+              <input type="text" class="form-control" name="monstart" id="monstartform"><!-- real form field needed by server -->
+              <span id="monstarthuman"></span> <b>am</b> 
+              <input id="mon" type="text" class="slider" value="" data-slider-min="0" data-slider-max="24" data-slider-step=".5" data-slider-value="[9,17]" data-slider-enabled="false"/>
+              <input type="text" class="form-control" name="monend"  id="monendform"><!-- real form field needed by server -->
+              <span id="monendhuman"></span><b>pm</b>
+              <span id="monsliderval"></span>
+            </span>
+            <!--end mon row-->
 
-        <%= f.submit "Submit", :class => "btn btn-lg btn-primary btn-block" %>
-      <% end %>
+            <span class="row tues-wrap">
+              <input type="text" class="form-control" name="tuesstart" id="tuesstartform">
+              <span id="tuesstarthuman"></span> <b>am</b> 
+              <input id="tues" type="text" class="slider" value="" data-slider-min="0" data-slider-max="24" data-slider-step=".5" data-slider-value="[9,17]" data-slider-enabled="false"/> 
+              <input type="text" class="form-control" name="tuesend"  id="tuesendform">
+              <span id="tuesendhuman"></span><b>pm</b>
+              <span id="tuessliderval"></span>
+            </span><!--end tues row-->
+
+            <span class="row wed-wrap">
+              <input type="text" class="form-control" name="wedstart" id="wedstartform">
+              <span id="wedstarthuman"></span> <b>am</b> 
+              <input id="wed" type="text" class="slider" value="" data-slider-min="0" data-slider-max="24" data-slider-step=".5" data-slider-value="[9,17]" data-slider-enabled="false"/> 
+              <input type="text" class="form-control" name="wedend"  id="wedendform">
+              <span id="wedendhuman"></span><b>pm</b>
+              <span id="wedsliderval"></span>
+            </span><!--end wed row-->
+
+            <span class="row thurs-wrap">
+              <input type="text" class="form-control" name="thursstart" id="thursstartform">
+              <span id="thursstarthuman"></span> <b>am</b> 
+              <input id="thurs" type="text" class="slider" value="" data-slider-min="0" data-slider-max="24" data-slider-step=".5" data-slider-value="[9,17]" data-slider-enabled="false"/> 
+              <input type="text" class="form-control" name="thursend"  id="thursendform">
+              <span id="thursendhuman"></span><b>pm</b>
+              <span id="thurssliderval"></span>
+            </span><!--end thu row-->
+
+            <span class="row fri-wrap">
+              <input type="text" class="form-control" name="fristart" id="fristartform">
+              <span id="fristarthuman"></span> <b>am</b> 
+              <input id="fri" type="text" class="slider" value="" data-slider-min="0" data-slider-max="24" data-slider-step=".5" data-slider-value="[9,17]" data-slider-enabled="false"/> 
+              <input type="text" class="form-control" name="friend"  id="friendform">
+              <span id="friendhuman"></span><b>pm</b>
+              <span id="frisliderval"></span>
+            </span><!--end row-->
+
+            <span class="row sat-wrap">
+              <input type="text" class="form-control" name="satstart" id="satstartform">
+              <span id="satstarthuman"></span> <b>am</b> 
+              <input id="sat" type="text" class="slider" value="" data-slider-min="0" data-slider-max="24" data-slider-step=".5" data-slider-value="[9,17]" data-slider-enabled="false"/> 
+              <input type="text" class="form-control" name="satend"  id="satendform">
+              <span id="satendhuman"></span><b>pm</b>
+              <span id="satsliderval"></span>
+            </span><!--end row-->
+
+            <span class="row sun-wrap">
+              <input type="text" class="form-control" name="sunstart" id="sunstartform">
+              <span id="sunstarthuman"></span> <b>am</b> 
+              <input id="sun" type="text" class="slider" value="" data-slider-min="0" data-slider-max="24" data-slider-step=".5" data-slider-value="[9,17]" data-slider-enabled="false"/> 
+              <input type="text" class="form-control" name="sunend"  id="sunendform">
+              <span id="sunendhuman"></span><b>pm</b>
+              <span id="sunsliderval"></span>
+            </span><!--end sun row-->
+          </span><!--end col-->
+        </span><!--end row-->
+        <hr>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="label">From</div>
+            <div class="input-append date" id="date1" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+              <input class="span2" size="16" type="text" value="12-02-2012" readonly> <!-- real form fields -->
+              <span class="add-on">
+                <span class="glyphicon glyphicon-calendar"></span>
+              </span>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="label">To</div>
+              <div class="input-append date" id="date2" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+                <input class="span2" size="16" type="text" value="12-02-2012" readonly>
+                <span class="add-on">
+                  <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="label">Upload an image</div>
+          <input type="file" name="img" class="form-control">
+          <%= f.submit "Submit", :class => "btn btn-lg btn-primary btn-block" %>
+        </div>
+        <% end %>
+        <div class="col-md-6 copy">
+          <p>Have a space that be can be transformed into a [ freespace ]?</p>
+          <p>Instead of letting your space sit vacant or idle, you can showcase it while making a lasting impact in the Austin community with the project’s born from it.</p>
+          <p>And, through a partnership with Realocate, a 501c3 non-profit organization, your gifted space is tax-deductible.</p>
+        </div><!--end col-->
     </div>
   </div>
 </div> <!-- /container -->
